@@ -1,0 +1,21 @@
+/* Case study harmonious styling for modern tech aesthetic */
+body {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+.cs-hero__image,
+.cs-gallery__item,
+.cs-fullwidth {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--card-border);
+}
+
+.cs-ds-block,
+.cs-before-after__panel,
+.cs-rationale,
+.cs-reflection__card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  backdrop-filter: blur(12px);
+}

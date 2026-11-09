@@ -1,0 +1,16 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Local Environment & Secrets
+.env*
+*.local
+
+# Node (if dependencies are installed)
+node_modules/
+dist/
+build/

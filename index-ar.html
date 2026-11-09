@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طارق زراري — مطوّر متكامل</title>
+  <meta name="description" content="طارق زراري، مطوّر متكامل وطالب هندسة إعلام آلي في المدرسة العليا للإعلام الآلي بالجزائر. يبني منتجات ويب كاملة بـTypeScript وReact وNext.js وNode.js وSupabase وPostgreSQL.">
+  <meta name="theme-color" content="#F3F0E8">
+  <meta property="og:title" content="طارق زراري — مطوّر متكامل">
+  <meta property="og:description" content="لا أبني الواجهات فقط. أهندس منتجات رقمية كاملة.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/editorial.css">
+</head>
+<body class="ed" id="top">
+
+  <a href="#main" class="ed-skip">تخطي إلى المحتوى</a>
+
+  <header class="ed-head">
+    <div class="ed-wrap ed-head__in">
+      <a href="index-ar.html" class="ed-mark" aria-label="طارق زراري — الرئيسية">
+        <span class="ed-mark__mono">TZ</span>
+        <span class="ed-mark__name">طارق زراري</span>
+      </a>
+
+      <nav class="ed-nav" aria-label="التنقل الرئيسي">
+        <a href="#work"><span>01</span>الأعمال</a>
+        <a href="#about"><span>02</span>نبذة</a>
+        <a href="#stack"><span>03</span>الحزمة</a>
+        <a href="#experience"><span>04</span>الخبرة</a>
+        <a href="#contact"><span>05</span>تواصل</a>
+      </nav>
+
+      <div class="ed-head__end">
+        <a href="index.html" class="ed-lang" hreflang="en" lang="en">EN</a>
+        <button class="ed-burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="ed-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="ed-menu" id="ed-menu" role="dialog" aria-label="القائمة">
+    <a href="#work"><span>01</span>الأعمال</a>
+    <a href="#about"><span>02</span>نبذة</a>
+    <a href="#stack"><span>03</span>الحزمة</a>
+    <a href="#experience"><span>04</span>الخبرة</a>
+    <a href="#contact"><span>05</span>تواصل</a>
+    <div class="ed-menu__foot">
+      <span dir="ltr">nt_zerari@esi.dz</span>
+      <a href="index.html" lang="en" hreflang="en">English</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="ed-hero">
+      <div class="ed-wrap">
+        <div class="ed-hero__top">
+          <span>مطوّر متكامل</span>
+          <span>الجزائر العاصمة — 36.75°N</span>
+          <span>ملف الأعمال / 2026</span>
+        </div>
+
+        <h1 class="ed-hero__title">
+          <span class="ed-hero__line">طارق</span>
+          <span class="ed-hero__line ed-hero__line--2">
+            <em>زراري</em>
+            <span class="ed-hero__role">يصمّم النظام،<br>ويكتب الكود.</span>
+          </span>
+        </h1>
+
+        <div class="ed-hero__grid">
+          <p class="ed-hero__lead">لا أبني الواجهات فقط. أهندس منتجات رقمية <em>كاملة</em>.</p>
+
+          <figure class="ed-hero__portrait">
+            <img src="assets/projects/portrait.jpg" alt="صورة طارق زراري" width="640" height="800" fetchpriority="high">
+            <figcaption><span>طارق زراري</span><span>ESI الجزائر — 2026</span></figcaption>
+          </figure>
+
+          <p class="ed-hero__note">
+            طالب هندسة إعلام آلي في المدرسة العليا للإعلام الآلي بالجزائر. <bdi>TypeScript</bdi> و<bdi>React</bdi> و<bdi>Next.js</bdi> في الواجهة، و<bdi>Node.js</bdi> و<bdi>Supabase</bdi> و<bdi>PostgreSQL</bdi> في الخلفية.
+          </p>
+        </div>
+
+        <div class="ed-hero__foot">
+          <a href="#work" class="ed-link ed-link--lg">أعمال مختارة <span aria-hidden="true">↙</span></a>
+          <span class="ed-hero__avail"><i aria-hidden="true"></i>متاح للتدريب والأدوار المبتدئة</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="ed-sec ed-wrap" aria-labelledby="work-title">
+      <div class="ed-sec__head">
+        <span class="ed-index">01</span>
+        <h2 class="ed-sec__title" id="work-title">أعمال مختارة</h2>
+        <p class="ed-sec__note">أربعة أنظمة من نموذج البيانات إلى الواجهة — ثلاثة منتجات منشورة واستكشاف تصميمي واحد يحافظ على حدة التفكير المنتجي.</p>
+      </div>
+
+      <div class="ed-projects">
+
+        <article class="ed-project ed-reveal">
+          <div class="ed-project__head">
+            <span class="ed-project__num">01</span>
+            <h3 class="ed-project__title">eCours</h3>
+            <p class="ed-project__kind">SaaS متعدد المستأجرين<br>تعليم</p>
+            <div class="ed-project__actions">
+              <a href="ecours-ar.html" class="ed-link">دراسة الحالة <span aria-hidden="true">↖</span></a>
+              <a href="https://github.com/tarekzerari-dev/ecours" target="_blank" rel="noopener noreferrer" class="ed-ext">المصدر ↗</a>
+            </div>
+          </div>
+          <figure class="ed-project__media">
+            <img src="assets/projects/ecours.jpg" alt="لوحة حضور eCours مع تسجيل QR وإحصاءات الإدارة" width="1280" height="632" loading="lazy" decoding="async">
+          </figure>
+          <div class="ed-project__foot">
+            <p>الحضور والأفواج والمستحقات وتقارير المركز في مكان واحد — مع أمان على مستوى الصفوف في Postgres يتولى الصلاحيات.</p>
+            <span class="ed-project__stack" dir="ltr">Next.js 16 · React 19 · TypeScript · Supabase · RLS</span>
+          </div>
+        </article>
+
+        <article class="ed-project ed-reveal">
+          <div class="ed-project__head">
+            <span class="ed-project__num">02</span>
+            <h3 class="ed-project__title">سند <span class="it">/ خيركم</span></h3>
+            <p class="ed-project__kind">منصة متكاملة<br>مجتمع</p>
+            <div class="ed-project__actions">
+              <a href="sanad-ar.html" class="ed-link">دراسة الحالة <span aria-hidden="true">↖</span></a>
+              <a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" class="ed-ext">الموقع المباشر ↗</a>
+            </div>
+          </div>
+          <figure class="ed-project__media">
+            <img src="assets/projects/sanad.jpg" alt="الصفحة الرئيسية لمنصة سند لمدرسة قرآنية" width="1280" height="688" loading="lazy" decoding="async">
+          </figure>
+          <div class="ed-project__foot">
+            <p>منصة عربية أولاً تستبدل الدفاتر الورقية بالحضور ومتابعة الحفظ والنقاط ولوحات الترتيب العامة.</p>
+            <span class="ed-project__stack" dir="ltr">Vite · Vanilla JS · Supabase · Netlify Blobs</span>
+          </div>
+        </article>
+
+        <article class="ed-project ed-reveal">
+          <div class="ed-project__head">
+            <span class="ed-project__num">03</span>
+            <h3 class="ed-project__title">LMCS</h3>
+            <p class="ed-project__kind">تصميم منتج + واجهة<br>أكاديمي</p>
+            <div class="ed-project__actions">
+              <a href="lmcs-ar.html" class="ed-link">دراسة الحالة <span aria-hidden="true">↖</span></a>
+              <a href="https://lmcs-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="ed-ext">الموقع المباشر ↗</a>
+            </div>
+          </div>
+          <figure class="ed-project__media">
+            <img src="assets/projects/lmcs.jpg" alt="واجهة نظام LMCS في الوضع الداكن" width="1280" height="842" loading="lazy" decoding="async">
+          </figure>
+          <div class="ed-project__foot">
+            <p>نظام إدارة الإشراف الأكاديمي لمخبر LMCS، مبني حول ثلاثة أدوار باحتياجات بيانات مختلفة.</p>
+            <span class="ed-project__stack" dir="ltr">Product design · Design system · Next.js · Supabase</span>
+          </div>
+        </article>
+
+        <article class="ed-project ed-reveal">
+          <div class="ed-project__head">
+            <span class="ed-project__num">04</span>
+            <h3 class="ed-project__title">HealthTrack</h3>
+            <p class="ed-project__kind">مفهوم تصميم منتج<br>صحة</p>
+            <div class="ed-project__actions">
+              <a href="healthtrack-ar.html" class="ed-link">دراسة الحالة <span aria-hidden="true">↖</span></a>
+              <a href="https://health-track-front.vercel.app/" target="_blank" rel="noopener noreferrer" class="ed-ext">العرض المباشر ↗</a>
+            </div>
+          </div>
+          <figure class="ed-project__media">
+            <img src="assets/projects/healthtrack.jpg" alt="واجهة حجز المواعيد الطبية HealthTrack" width="1280" height="616" loading="lazy" decoding="async">
+          </figure>
+          <div class="ed-project__foot">
+            <p>مسار حجز يختصر البحث عن الطبيب وحجز الموعد إلى ثلاث خطوات واضحة — بُني كنموذج React تفاعلي.</p>
+            <span class="ed-project__stack" dir="ltr">React · UI/UX · Prototype</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="ed-sec ed-wrap" aria-labelledby="about-title">
+      <div class="ed-sec__head">
+        <span class="ed-index">02</span>
+        <h2 class="ed-sec__title" id="about-title">نبذة</h2>
+        <p class="ed-sec__note">قرارات المنتج تلتقي بقيود الهندسة — هذا هو الجزء الذي يهمني في البرمجيات.</p>
+      </div>
+
+      <div class="ed-about">
+        <div class="ed-about__label">
+          <span class="ed-index">02</span>
+          <span>الملف</span>
+        </div>
+        <div>
+          <p class="ed-statement">أصمّم النظام، ثم أبنيه — من المخطط وحدود الـAPI إلى آخر <em>تفاعل</em>.</p>
+
+          <div class="ed-about__cols">
+            <p>أنا طارق، طالب هندسة إعلام آلي في المدرسة العليا للإعلام الآلي بالجزائر ومطوّر متكامل. أحبّ الجزء الذي تلتقي فيه قرارات المنتج بقيود الهندسة: كيف يشكّل نموذج البيانات سير العمل، وكيف تؤثر حدود الـAPI على الواجهة، وكيف يحذف تفاعل صغير فئة كاملة من تذاكر الدعم.</p>
+
+            <dl class="ed-facts">
+              <div><dt>التعليم</dt><dd>المدرسة العليا للإعلام الآلي بالجزائر — هندسة إعلام آلي، 2023 إلى اليوم</dd></div>
+              <div><dt>حالياً</dt><dd>مسؤول العلاقات الخارجية، نادي Shellmates — النادي السيبراني في ESI</dd></div>
+              <div><dt>التركيز</dt><dd>تطوير الويب المتكامل، تصميم المنتج، أنظمة RTL العربية</dd></div>
+              <div><dt>أستكشف</dt><dd>تطوير الهاتف باستخدام Flutter</dd></div>
+              <div><dt>الموقع</dt><dd>الجزائر العاصمة — UTC+1</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="ed-sec ed-wrap" aria-labelledby="stack-title">
+      <div class="ed-sec__head">
+        <span class="ed-index">03</span>
+        <h2 class="ed-sec__title" id="stack-title">الحزمة</h2>
+        <p class="ed-sec__note">مجموعة مركزة أستطيع الدفاع عنها — لا قائمة بكل ما فتحته مرة.</p>
+      </div>
+
+      <div class="ed-stack">
+        <div class="ed-stack__col ed-reveal">
+          <h3>اللغات</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>C / C++</li>
+            <li>HTML &amp; CSS</li>
+          </ul>
+        </div>
+        <div class="ed-stack__col ed-reveal">
+          <h3>الواجهة</h3>
+          <ul>
+            <li>React 19</li>
+            <li>Next.js 16</li>
+            <li>Tailwind CSS v4</li>
+            <li>TanStack Query</li>
+            <li>Framer Motion</li>
+            <li>Vite</li>
+          </ul>
+        </div>
+        <div class="ed-stack__col ed-reveal">
+          <h3>الخلفية والبيانات</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Server Actions</li>
+            <li>REST APIs</li>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+            <li>أمان الصفوف</li>
+          </ul>
+        </div>
+        <div class="ed-stack__col ed-reveal">
+          <h3>الأدوات والتصميم</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Netlify</li>
+            <li>Vercel</li>
+            <li>Figma</li>
+            <li>Flutter <small>أستكشفه</small></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="ed-sec ed-wrap" aria-labelledby="experience-title">
+      <div class="ed-sec__head">
+        <span class="ed-index">04</span>
+        <h2 class="ed-sec__title" id="experience-title">الخبرة</h2>
+        <p class="ed-sec__note">الحياة الطلابية في ESI كانت بقدر ما هي عن الفرق والتسليم بقدر ما هي عن الكود.</p>
+      </div>
+
+      <div class="ed-exp">
+        <article class="ed-exp__row ed-reveal">
+          <span class="ed-exp__year">حالياً</span>
+          <div>
+            <h3 class="ed-exp__role">مسؤول العلاقات الخارجية</h3>
+            <p class="ed-exp__org">نادي Shellmates · ESI الجزائر</p>
+          </div>
+          <p class="ed-exp__note">تمثيل النادي السيبراني في ESI أمام الشركاء والمتحدثين والشركات، وتنسيق التواصل الخارجي حول فعاليات النادي.</p>
+        </article>
+
+        <article class="ed-exp__row ed-reveal">
+          <span class="ed-exp__year">2024 — اليوم</span>
+          <div>
+            <h3 class="ed-exp__role">بناء منتجات مستقل</h3>
+            <p class="ed-exp__org">eCours · سند / خيركم · LMCS · HealthTrack</p>
+          </div>
+          <p class="ed-exp__note">أخذ المنتجات من المتطلبات ونماذج البيانات إلى الواجهات والنشر — غالباً وحدي، ودائماً والمستخدم النهائي حاضر.</p>
+        </article>
+
+        <article class="ed-exp__row ed-reveal">
+          <span class="ed-exp__year">2023 — اليوم</span>
+          <div>
+            <h3 class="ed-exp__role">هندسة إعلام آلي</h3>
+            <p class="ed-exp__org">ESI الجزائر · المدرسة العليا للإعلام الآلي</p>
+          </div>
+          <p class="ed-exp__note">دراسات هندسية تركز على أساسيات الإعلام الآلي والخوارزميات وأنظمة البرمجيات والمشاريع التطبيقية.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="ed-contact ed-wrap" aria-labelledby="contact-title">
+      <div class="ed-contact__kicker" id="contact-title">05 — تواصل</div>
+      <a href="mailto:nt_zerari@esi.dz" class="ed-contact__mail" dir="ltr">nt_zerari@esi.dz</a>
+      <div class="ed-contact__row">
+        <p>متاح للتدريب والأدوار المبتدئة والتعاون حيث تستحق المشكلة حلاً صحيحاً. البريد أسرع وسيلة للوصول إليّ.</p>
+        <div class="ed-socials">
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="ed-ext">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="ed-ext">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ed-foot">
+    <div class="ed-wrap ed-foot__in">
+      <span>© <span data-year></span> طارق زراري</span>
+      <span>صُمّم وبُني في الجزائر العاصمة</span>
+      <a href="#top">إلى الأعلى ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/editorial.js"></script>
+</body>
+</html>

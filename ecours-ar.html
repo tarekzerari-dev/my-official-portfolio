@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCours — دراسة حالة | طارق زراري</title>
+  <meta name="description" content="eCours: منصة SaaS متعددة المستأجرين لمراكز الدروس الخصوصية مبنية بـNext.js 16 وTypeScript وSupabase وأمان RLS وحضور عبر QR. دراسة حالة من طارق زراري.">
+  <meta property="og:title" content="eCours — دراسة حالة | طارق زراري">
+  <meta property="og:description" content="منصة متعددة المستأجرين: مخطط Postgres، أمان على مستوى الصفوف، حضور عبر QR، وواجهة عربية أولاً.">
+    <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/editorial-case.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index-ar.html" class="nav__logo">طارق زراري</a>
+        <div class="nav__links">
+          <a href="index-ar.html#work" class="nav__link">الأعمال</a>
+          <a href="index-ar.html#about" class="nav__link">نبذة عني</a>
+          <a href="index-ar.html#stack" class="nav__link">الحزمة</a>
+          <a href="index-ar.html#experience" class="nav__link">الخبرة</a>
+          <a href="index-ar.html#contact" class="nav__link">تواصل معي</a>
+        </div>
+        <div class="nav__lang">
+          <a href="ecours.html">EN</a>
+          <span class="nav__lang-sep">|</span>
+          <a href="ecours-ar.html" class="active">AR</a>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index-ar.html#work" class="mobile-menu__link">الأعمال</a>
+    <a href="index-ar.html#about" class="mobile-menu__link">نبذة عني</a>
+    <a href="index-ar.html#stack" class="mobile-menu__link">الحزمة</a>
+    <a href="index-ar.html#experience" class="mobile-menu__link">الخبرة</a>
+    <a href="index-ar.html#contact" class="mobile-menu__link">تواصل معي</a>
+    <div class="nav__lang" style="margin-top: 1rem; justify-content: center;">
+      <a href="ecours.html">English</a>
+      <span class="nav__lang-sep">|</span>
+      <a href="ecours-ar.html" class="active">العربية</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Case Study Hero -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__breadcrumb hero-enter hero-enter--delay-1">
+          <a href="index-ar.html">الرئيسية</a><span>/</span><a href="index-ar.html#work">الأعمال</a><span>/</span><span>eCours</span>
+        </div>
+        <div class="cs-hero__tags hero-enter hero-enter--delay-2">
+          <span class="badge badge--accent">SaaS</span>
+          <span class="badge badge--accent">تكنولوجيا التعليم</span>
+          <span class="badge badge--accent">هندسة متكاملة</span>
+        </div>
+        <h1 class="cs-hero__title hero-enter hero-enter--delay-2">eCours</h1>
+        <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
+          منصة سحابية مصممة لرقمنة وتحديث إدارة مراكز الدروس الخصوصية والأساتذة المستقلين، بهدف تبسيط العمليات وتسهيل المتابعة.
+        </p>
+        <div class="cs-hero__image hero-enter hero-enter--delay-4">
+          <img src="assets/projects/ecours.jpg" alt="لوحة حضور eCours مع تسجيل QR وإحصاءات الإدارة" width="1280" height="632" loading="eager" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Info Bar -->
+    <section class="cs-info" aria-label="Project information">
+      <div class="container">
+        <div class="cs-info__grid reveal">
+          <div class="cs-info__item"><span class="cs-info__label">الدور</span><span class="cs-info__value">مطوّر متكامل</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الجدول الزمني</span><span class="cs-info__value">2024</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">المنصة</span><span class="cs-info__value">ويب وموبايل</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الأدوات</span><span class="cs-info__value">Next.js 16, TypeScript, Supabase, Tailwind CSS</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">المجال</span><span class="cs-info__value">التعليم / SaaS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <div class="container">
+      <div class="cs-content">
+        <aside class="cs-sidebar" aria-label="Case study navigation">
+          <nav class="cs-sidebar__nav">
+            <a href="#problem" class="cs-sidebar__link active">المشكلة</a>
+            <a href="#users" class="cs-sidebar__link">المستخدمون</a>
+            <a href="#design-flow" class="cs-sidebar__link">مسار التصميم</a>
+            <a href="#visual-identity" class="cs-sidebar__link">الهوية البصرية</a>
+            <a href="#final-design" class="cs-sidebar__link">التصميم النهائي</a>
+            <a href="#engineering" class="cs-sidebar__link">الهندسة</a>
+          </nav>
+        </aside>
+
+        <div>
+          <!-- 01 Problem -->
+          <section id="problem" class="cs-section reveal">
+            <span class="cs-section__overline">01 — المشكلة</span>
+            <h2 class="cs-section__title">تحدي التصميم</h2>
+            <p class="cs-section__text">
+              غالباً ما تواجه مراكز الدروس الخصوصية والأساتذة المستقلون صعوبة في إدارة تسجيلات الطلاب، تتبع المدفوعات، وجدولة الحصص عبر الورق أو جداول الإكسل. كان التحدي هو تصميم منصة سحابية مركزية (SaaS) تعمل على تبسيط المهام الإدارية المعقدة، وتقديم تجربة مستخدم حديثة تقلل من منحنى التعلم للموظفين غير التقنيين.
+            </p>
+          </section>
+
+          <!-- 02 Users -->
+          <section id="users" class="cs-section reveal">
+            <span class="cs-section__overline">02 — المستخدمون</span>
+            <h2 class="cs-section__title">من يستخدم هذه المنصة؟</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              تم بناء eCours لمجموعة متنوعة من المستخدمين، كل منهم بأهداف ومستويات تقنية مختلفة.
+            </p>
+            <div class="cs-users">
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <div class="cs-user__name">إدارة المركز</div>
+                <div class="cs-user__desc">تحتاج إلى إدارة الجداول الزمنية، وتتبع الإيرادات، ومراقبة الأداء العام للمركز بطريقة شاملة.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                <div class="cs-user__name">الأساتذة</div>
+                <div class="cs-user__desc">يرغبون في طريقة سهلة لمعرفة حصصهم القادمة، الحضور، ومداخيلهم الشخصية بشكل مستقل.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
+                <div class="cs-user__name">موظفو الاستقبال</div>
+                <div class="cs-user__desc">يتطلبون مسار عمل سريع وخالٍ من الأخطاء لتسجيل الطلاب الجدد ومعالجة المدفوعات فوراً.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 03 Design Flow -->
+          <section id="design-flow" class="cs-section reveal">
+            <span class="cs-section__overline">03 — مسار التصميم</span>
+            <h2 class="cs-section__title">استراتيجية واجهة المستخدم والمميزات</h2>
+            <div class="cs-flow-list">
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">01</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">لوحات تحكم مبنية على الأدوار</h3>
+                  <p class="cs-flow-item__text">تقديم واجهات مخصصة تعرض المعلومات الأكثر صلة للمديرين والأساتذة وموظفي الاستقبال، مما يقلل من الفوضى البصرية.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">02</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">جدولة موحدة</h3>
+                  <p class="cs-flow-item__text">نظام تقويم متكامل يسمح بعرض الحصص وحل التعارضات وتحديث الجداول بسلاسة وسهولة.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">03</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">تسجيل سريع</h3>
+                  <p class="cs-flow-item__text">مسار تسجيل مبسط من 3 خطوات يمكّن موظفي الاستقبال من إضافة الطلاب للحصص ومعالجة المدفوعات في أقل من دقيقة.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">04</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">تتبع مالي</h3>
+                  <p class="cs-flow-item__text">وحدة شفافة ومفصلة للموارد المالية تحلل الإيرادات، وتحسب حصص الأساتذة، وتوفر وصولاً سريعاً لتواريخ الدفع.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 Visual Identity -->
+          <section id="visual-identity" class="cs-section reveal">
+            <span class="cs-section__overline">04 — الهوية البصرية</span>
+            <h2 class="cs-section__title">بناء الثقة من خلال التصميم</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              تم تصميم الواجهة البصرية لتعكس الاحترافية، الثقة، والكفاءة المطلوبة في البرمجيات الإدارية الحديثة.
+            </p>
+            <div class="cs-vi-grid">
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+                <h3 class="cs-vi-card__title">ألوان احترافية</h3>
+                <p class="cs-vi-card__text">استخدام ألوان هادئة مثل الأزرق الداكن والأسود للتأسيس، مع الأخضر كتمييز إيجابي للأفعال الرئيسية وتأكيد العمليات.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+                <h3 class="cs-vi-card__title">الطباعة الواضحة</h3>
+                <p class="cs-vi-card__text">دمج خطوط حديثة تدعم اللغتين معاً لضمان مقروئية عالية للبيانات المعقدة، مثل الجداول والأرقام المالية.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                <h3 class="cs-vi-card__title">تخطيط البطاقات</h3>
+                <p class="cs-vi-card__text">استخدام البطاقات الظليلة لتنظيم المعلومات الثقيلة، مما يساعد المستخدمين على التركيز في عنصر واحد فقط كل مرة.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                <h3 class="cs-vi-card__title">تفاعلات دقيقة</h3>
+                <p class="cs-vi-card__text">ردود فعل مرئية سريعة أثناء تفاعلات التمرير، النقر، وإرسال البيانات، لإشعار المستخدم بالتحكم الكامل وسرعة النظام.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 05 Final Design -->
+          <section id="final-design" class="cs-section reveal">
+            <span class="cs-section__overline">05 — التصميم النهائي</span>
+            <h2 class="cs-section__title">المنصة النهائية</h2>
+
+            <h3 class="cs-design-subtitle">لوحة التحكم الرئيسية</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">نظرة عامة على الأداء والمؤشرات الرئيسية والإيرادات الخاصة بمركز الدروس.</p>
+            <div class="cs-fullwidth">
+              <img src="ecours-asset/landing1.png" alt="لوحة التحكم الرئيسية" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+            
+            <div class="cs-fullwidth" style="margin-top: var(--space-4);">
+              <img src="ecours-asset/landing2.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">الجدولة الموحدة</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">تقويم مركزي يوفر نظرة سريعة على جميع الحصص والمجموعات المجدولة في المركز.</p>
+            <div class="cs-fullwidth">
+              <img src="ecours-asset/admin1.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+            </div>
+
+            <h3 class="cs-design-subtitle">إدارة الحصص والطلاب</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">نظام شامل لإدارة بيانات الطلاب، المدفوعات، وقوائم الحضور للمجموعات المختلفة.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/admin2.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/admin3.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+
+            <div class="cs-gallery cs-gallery--2" style="margin-top: var(--space-4);">
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/admin4.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/landing3.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+
+            <h3 class="cs-design-subtitle">تسجيل الدخول والإعدادات</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">واجهة دخول نظيفة بالإضافة إلى إعدادات لتخصيص القاعات والمواد وتفاصيل المركز.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/darkmodeexamlpe.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/landing4.png" alt="لقطة من واجهة eCours" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+          </section>
+
+          <!-- Engineering Deep Dive -->
+          <section id="engineering" class="cs-section reveal">
+            <span class="cs-section__overline">الهندسة</span>
+            <h2 class="cs-section__title">النظام الذي يقف خلف الواجهات</h2>
+            <p class="cs-section__text">
+              eCours ليس نموذجاً تصميمياً، بل تطبيق Next.js 16 فعلي بـReact 19 وTypeScript وSupabase: تُصيّر مكوّنات الخادم لوحات التحكم حسب الدور، وتتولى Server Actions كل عمليات الكتابة، ويحافظ TanStack Query على تحديث القوائم بعد كل تغيير.
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>مخطط متعدد المستأجرين</h4>
+                  <p>تسع جداول مترابطة: <bdi>profiles</bdi>، <bdi>schools</bdi>، <bdi>teacher_profiles</bdi>، <bdi>groups</bdi>، <bdi>students</bdi>، <bdi>student_groups</bdi>، <bdi>sessions</bdi>، <bdi>attendance</bdi>، <bdi>payments</bdi> — معزولة حسب المركز والدور.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>أمان على مستوى الصفوف</h4>
+                  <p>سياسات RLS في Postgres تفرض حدود المدير العام والمدير والأستاذ على مستوى قاعدة البيانات، لا على مستوى الواجهة فقط.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>حضور عبر QR</h4>
+                  <p>كل حصة تصدر رمز QR، ويقرأه الأستاذ بكاميرا الجهاز لتُسجّل الحضور في Postgres لحظياً.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>عربي أولاً</h4>
+                  <p>كل شاشة تصدر بالعربية والإنجليزية، مع تخطيط RTL وأيقونات معكوسة وتنسيق يراعي اللغة منذ المكوّن الأول.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cs-overview">
+              <div class="cs-overview__block"><span class="cs-overview__label">الحزمة</span><span class="cs-overview__value">Next.js 16، React 19، TypeScript، Tailwind CSS v4، Framer Motion، TanStack Query v5</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">الخلفية</span><span class="cs-overview__value">Supabase Auth، Postgres، RLS، Server Actions — منشور على Netlify</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">المصدر</span><span class="cs-overview__value"><a href="https://github.com/tarekzerari-dev/ecours" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">github.com/tarekzerari-dev/ecours</a></span></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="cs-next" aria-label="Next project">
+      <div class="container reveal">
+        <div class="cs-next__label">المشروع القادم</div>
+        <a href="healthtrack-ar.html" class="cs-next__title">HealthTrack ←</a>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index-ar.html" class="footer__logo">طارق زراري</a>
+          <div class="footer__copyright">&copy; <span data-year></span> جميع الحقوق محفوظة.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

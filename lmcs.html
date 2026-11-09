@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMCS — Case Study | Tarek Zerari</title>
+  <meta name="description" content="LMCS: Designing a supervision management platform that replaced scattered spreadsheets with role-based dashboards for ESI Algiers. Product design case study by Tarek Zerari.">
+  <meta property="og:title" content="LMCS — Case Study | Tarek Zerari">
+  <meta property="og:description" content="Making complex supervision and management workflows easier to navigate.">
+    <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/editorial-case.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Tarek Zerari</a>
+        <div class="nav__links">
+          <a href="index.html#work" class="nav__link">Work</a>
+          <a href="index.html#about" class="nav__link">About</a>
+          <a href="index.html#stack" class="nav__link">Stack</a>
+          <a href="index.html#experience" class="nav__link">Experience</a>
+          <a href="index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <div class="nav__actions">
+          <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <div class="nav__lang" role="group" aria-label="Language selector">
+            <a href="lmcs.html" class="active">EN</a>
+            <a href="index-fr.html#work">FR</a>
+          </div>
+          <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#work" class="mobile-menu__link">Work</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#stack" class="mobile-menu__link">Stack</a>
+    <a href="index.html#experience" class="mobile-menu__link">Experience</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__breadcrumb hero-enter hero-enter--delay-1">
+          <a href="index.html">Home</a><span>/</span><a href="index.html#work">Work</a><span>/</span><span>LMCS</span>
+        </div>
+
+        <div class="cs-hero__tags hero-enter hero-enter--delay-2">
+          <span class="badge badge--accent">Enterprise</span>
+          <span class="badge badge--accent">SaaS</span>
+          <span class="badge badge--accent">Dashboard</span>
+          <span class="badge badge--accent">Product Design</span>
+        </div>
+
+        <h1 class="cs-hero__title hero-enter hero-enter--delay-2">LMCS</h1>
+
+        <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
+          Replacing fragmented spreadsheets and email chains with a unified supervision management platform for an academic research laboratory.
+        </p>
+
+        <div class="hero-enter hero-enter--delay-3" style="margin-top: var(--space-4); margin-bottom: var(--space-6);">
+          <a href="https://lmcs-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+            Visit live site <span aria-hidden="true" style="margin-left: 0.5rem;">↗</span>
+          </a>
+        </div>
+
+        <div class="cs-hero__image hero-enter hero-enter--delay-4">
+          <img src="assets/LMCS/landingdark.png" alt="LMCS Supervision Management — Dark mode landing page" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Info Bar -->
+    <section class="cs-info" aria-label="Project information">
+      <div class="container">
+        <div class="cs-info__grid reveal">
+          <div class="cs-info__item">
+            <span class="cs-info__label">Role</span>
+            <span class="cs-info__value">Product Designer</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Timeline</span>
+            <span class="cs-info__value">2024</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Platform</span>
+            <span class="cs-info__value">Web</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Tools</span>
+            <span class="cs-info__value">Figma, Next.js, Supabase</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Industry</span>
+            <span class="cs-info__value">Academic / Enterprise</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <div class="container">
+      <div class="cs-content">
+
+        <aside class="cs-sidebar" aria-label="Case study navigation">
+          <nav class="cs-sidebar__nav">
+            <a href="#overview" class="cs-sidebar__link active">Overview</a>
+            <a href="#problem" class="cs-sidebar__link">Problem</a>
+            <a href="#users" class="cs-sidebar__link">Users & Roles</a>
+            <a href="#goals" class="cs-sidebar__link">Goals</a>
+            <a href="#information-architecture" class="cs-sidebar__link">IA & Flows</a>
+            <a href="#wireframes" class="cs-sidebar__link">Wireframes</a>
+            <a href="#design-system" class="cs-sidebar__link">Design System</a>
+            <a href="#final-design" class="cs-sidebar__link">Final Interface</a>
+            <a href="#before-after" class="cs-sidebar__link">Before → After</a>
+            <a href="#prototype" class="cs-sidebar__link">Prototype</a>
+            <a href="#reflection" class="cs-sidebar__link">Reflection</a>
+          </nav>
+        </aside>
+
+        <div>
+
+          <!-- 01 Overview -->
+          <section id="overview" class="cs-section reveal">
+            <span class="cs-section__overline">01 — Overview</span>
+            <h2 class="cs-section__title">What is LMCS?</h2>
+            <p class="cs-section__text">
+              LMCS is a web platform designed for the Computer Systems Laboratory (LMCS) at ESI Algiers to manage academic supervisions — tracking students, monitoring progress across semesters, managing supervisor workloads, and generating reports. The platform serves three distinct user roles (supervisors, directors, administrators) through tailored dashboard experiences.
+            </p>
+            <div class="cs-overview">
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">The Product</span>
+                <span class="cs-overview__value">Multi-role supervision management platform with dashboards, data tables, and reporting</span>
+              </div>
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">My Contribution</span>
+                <span class="cs-overview__value">End-to-end product design — from information architecture and wireframes to design system, final UI, and developer handoff</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 02 Problem -->
+          <section id="problem" class="cs-section reveal">
+            <span class="cs-section__overline">02 — The Problem</span>
+            <h2 class="cs-section__title">Fragmented workflows with no central system</h2>
+            <p class="cs-section__text">
+              The LMCS laboratory had no centralized system for managing academic supervisions. Everything was handled through scattered spreadsheets, emails, and manual paperwork. Supervisors struggled to track student progress across semesters, directors had no clear overview of laboratory activity, and there was no role-based access to ensure data security.
+            </p>
+            <p class="cs-section__text" style="margin-top: var(--space-4);">
+              The core design challenge: transform these fragmented workflows into a unified platform that makes complex academic data feel simple to navigate — while serving three different user roles with very different needs.
+            </p>
+          </section>
+
+          <!-- 03 Users & Roles -->
+          <section id="users" class="cs-section reveal">
+            <span class="cs-section__overline">03 — Users & Roles</span>
+            <h2 class="cs-section__title">Three roles, three different dashboards</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              Each role has a tailored dashboard view with specific permissions and data access designed to match their daily responsibilities.
+            </p>
+            <div class="cs-users">
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="cs-user__name">Supervisors</div>
+                <div class="cs-user__desc">Track student progress, manage supervision sessions, and record milestones from enrollment to defense.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="cs-user__name">Directors</div>
+                <div class="cs-user__desc">Monitor laboratory-wide statistics, generate annual reports, and oversee supervision workload distribution.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="cs-user__name">Administrators</div>
+                <div class="cs-user__desc">Manage user accounts, assign roles, configure system settings, and maintain data integrity across the platform.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 Goals & Constraints -->
+          <section id="goals" class="cs-section reveal">
+            <span class="cs-section__overline">04 — Goals & Constraints</span>
+            <h2 class="cs-section__title">Design goals that shaped decisions</h2>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Role-based access control</h4>
+                  <p>Each user should only see data relevant to their role — no data leaks, no confusion.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Data-dense but scannable</h4>
+                  <p>Directors and supervisors work with large tables — the UI must make scanning fast and filtering intuitive.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20V2z"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Dual theme from day one</h4>
+                  <p>Both light and dark themes designed simultaneously — not as an afterthought — with semantic color tokens.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Report generation</h4>
+                  <p>Directors need exportable reports (CSV/PDF) for annual reviews without manual data compilation.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 05 Information Architecture -->
+          <section id="information-architecture" class="cs-section reveal">
+            <span class="cs-section__overline">05 — Information Architecture</span>
+            <h2 class="cs-section__title">Structuring three different experiences</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-4);">
+              The biggest IA challenge was designing a navigation system that adapts to three user roles while maintaining a consistent structural pattern. Each role gets a sidebar with different menu items, but the overall layout, interaction patterns, and visual language remain identical — reducing cognitive load for users who might switch between contexts.
+            </p>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The sidebar-first layout was chosen specifically for this project because supervisors and directors spend extended time working with data tables and dashboards. A persistent sidebar keeps navigation accessible without competing with the main content area.
+            </p>
+
+            <!-- Placeholder: IA Diagram -->
+            <div class="cs-placeholder cs-placeholder--flow">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4"/></svg>
+              <span class="cs-placeholder__label">Information Architecture Diagram</span>
+              <span class="cs-placeholder__sublabel">Role-based navigation structure for Supervisor, Director, and Admin</span>
+            </div>
+          </section>
+
+          <!-- 06 Wireframes -->
+          <section id="wireframes" class="cs-section reveal">
+            <span class="cs-section__overline">06 — Wireframes</span>
+            <h2 class="cs-section__title">Exploring layout and hierarchy</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              Low-fidelity wireframes were created for key screens — admin dashboard, supervisor panel, director statistics, and the landing/sign-in experience. The focus was on establishing information hierarchy, data table patterns, and stat card placements before committing to visual design.
+            </p>
+
+            <!-- Placeholder: Wireframes -->
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-placeholder cs-placeholder--wireframe">
+                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                <span class="cs-placeholder__label">Dashboard Wireframe</span>
+                <span class="cs-placeholder__sublabel">Low-fidelity layout exploration</span>
+              </div>
+              <div class="cs-placeholder cs-placeholder--wireframe">
+                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                <span class="cs-placeholder__label">Data Table Wireframe</span>
+                <span class="cs-placeholder__sublabel">User management layout iteration</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 07 Design System -->
+          <section id="design-system" class="cs-section reveal">
+            <span class="cs-section__overline">07 — Design System</span>
+            <h2 class="cs-section__title">Typography, colors &amp; component library</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The design system was built to feel professional, focused, and enterprise-grade — prioritizing clarity and legibility across data-heavy interfaces.
+            </p>
+
+            <div class="cs-vi-grid">
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Typography</h3>
+                <p class="cs-vi-card__text">Inter is used as the primary typeface — clean, geometric, and optimized for UI. Weights range from Regular (400) for body text to Bold (700) for headings, with tight letter-spacing for a modern feel.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Color System</h3>
+                <p class="cs-vi-card__text">A deep navy (#0F172A) serves as the dark theme base, paired with vibrant blue (#3B82F6) for primary actions. The light theme uses clean whites with the same blue system, ensuring brand consistency across modes.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20V2z"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Dual Theme</h3>
+                <p class="cs-vi-card__text">Both themes designed simultaneously using semantic color tokens. Every component adapts seamlessly, with accessible contrast ratios maintained across both modes.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Component Library</h3>
+                <p class="cs-vi-card__text">Stat cards, data tables, sidebar navigation, form inputs, role badges, status indicators, and chart components — all built as reusable Figma components with consistent spacing and border-radius tokens.</p>
+              </div>
+            </div>
+
+            <!-- Placeholder: Design System -->
+            <div class="cs-placeholder cs-placeholder--system" style="margin-top: var(--space-8);">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              <span class="cs-placeholder__label">Design System Overview</span>
+              <span class="cs-placeholder__sublabel">Color tokens, typography scale, component samples, spacing grid</span>
+            </div>
+          </section>
+
+          <!-- 08 Final Interface -->
+          <section id="final-design" class="cs-section reveal">
+            <span class="cs-section__overline">08 — Final Interface</span>
+            <h2 class="cs-section__title">The finished product</h2>
+
+            <!-- Landing Pages -->
+            <h3 class="cs-design-subtitle">Landing Page</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The public-facing landing page introduces the platform with a clear value proposition, key statistics, and a direct sign-in CTA — designed in both light and dark variants.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/landingpage.png" alt="LMCS landing page — Light theme" loading="lazy">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/landingdark.png" alt="LMCS landing page — Dark theme" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Features & About -->
+            <h3 class="cs-design-subtitle">Features &amp; About</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The features section showcases three core pillars — Student Management, Progress Tracking, and Reports &amp; Analytics — alongside an about section explaining the laboratory's mission and user roles.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/landing2.png" alt="Features and about section — Light theme" loading="lazy">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/landingpage2.png" alt="Features and about section — Dark theme" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Sign In -->
+            <h3 class="cs-design-subtitle">Sign In Experience</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A clean split-layout sign-in page with a welcome message on the left and the authentication form on the right — maintaining the brand's visual language across both themes.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/sign.png" alt="Sign in page — Light theme" loading="lazy">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="assets/LMCS/signdark.png" alt="Sign in page — Dark theme" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Admin Dashboard -->
+            <h3 class="cs-design-subtitle">Admin Dashboard</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The administrator's control center — displaying total users, approval status, and supervision counts at a glance. Below, the User Management table allows searching, filtering by role, and managing accounts.</p>
+            <div class="cs-fullwidth">
+              <img src="assets/LMCS/admindash.png" alt="Admin dashboard — System administration panel with stats and user management" loading="lazy">
+            </div>
+
+            <!-- Admin User Management -->
+            <h3 class="cs-design-subtitle">User Management</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A detailed user management view with a data table showing names, emails, roles (with color-coded badges), departments, join dates, and quick actions — plus a summary panel breaking down users by role.</p>
+            <div class="cs-fullwidth">
+              <img src="assets/LMCS/adminuserdark.png" alt="Admin user management — Detailed table with role badges and user summary" loading="lazy">
+            </div>
+
+            <!-- Director Statistics -->
+            <h3 class="cs-design-subtitle">Director — Global Statistics</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The director's statistics dashboard provides a bird's-eye view of the laboratory — total supervisions, active/completed ratios, status distribution charts, supervision type breakdowns, and performance metrics.</p>
+            <div class="cs-fullwidth">
+              <img src="assets/LMCS/directordashdark.png" alt="Director statistics — Global overview with charts and performance metrics" loading="lazy">
+            </div>
+
+            <!-- Director Reports -->
+            <h3 class="cs-design-subtitle">Director — Reports &amp; Analytics</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The reports page features color-coded stat cards, distribution pie charts, bar graphs for role breakdowns, academic year trends, and CSV/PDF export capabilities for annual reporting.</p>
+            <div class="cs-fullwidth">
+              <img src="assets/LMCS/directorreports.png" alt="Director reports — Analytics with colored stat cards, charts, and export options" loading="lazy">
+            </div>
+
+            <!-- Supervisor Dashboard -->
+            <h3 class="cs-design-subtitle">Supervisor Dashboard</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The supervisor's workspace shows their personal supervision history with a searchable, filterable data table — displaying title, type, student, status, year, and quick-action buttons for editing and viewing details.</p>
+            <div class="cs-fullwidth">
+              <img src="assets/LMCS/supervisordashdark.png" alt="Supervisor dashboard — Personal supervision history with search and filters" loading="lazy">
+            </div>
+          </section>
+
+          <!-- 09 Before → After -->
+          <section id="before-after" class="cs-section reveal">
+            <span class="cs-section__overline">09 — Before → After</span>
+            <h2 class="cs-section__title">From fragmented to unified</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The transformation wasn't just visual — it was structural. The platform replaced an entire manual workflow.
+            </p>
+
+            <div class="cs-before-after">
+              <div class="cs-before-after__panel">
+                <span class="cs-before-after__label cs-before-after__label--before">Before</span>
+                <p class="cs-before-after__text">Supervision data scattered across personal spreadsheets. Directors requesting reports via email. No centralized student tracking. Manual role-based access through shared folders.</p>
+                <!-- Placeholder -->
+                <div class="cs-placeholder cs-placeholder--flow" style="margin-top: var(--space-4);">
+                  <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span class="cs-placeholder__label">Old Workflow Illustration</span>
+                </div>
+              </div>
+              <div class="cs-before-after__arrow" aria-hidden="true">→</div>
+              <div class="cs-before-after__panel">
+                <span class="cs-before-after__label cs-before-after__label--after">After</span>
+                <p class="cs-before-after__text">One platform, three dashboards. Supervisors track progress in real-time. Directors generate reports with one click. Administrators manage roles and permissions from a central panel.</p>
+                <!-- Placeholder -->
+                <div class="cs-placeholder cs-placeholder--flow" style="margin-top: var(--space-4);">
+                  <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                  <span class="cs-placeholder__label">New Platform Overview</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 10 Prototype -->
+          <section id="prototype" class="cs-section reveal">
+            <span class="cs-section__overline">10 — Prototype</span>
+            <h2 class="cs-section__title">Interactive prototype</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              A clickable Figma prototype was created covering the core user journeys — supervisor login, student progress review, and director report generation.
+            </p>
+            <div class="cs-placeholder cs-placeholder--prototype">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span class="cs-placeholder__label">Figma Prototype Embed</span>
+              <span class="cs-placeholder__sublabel">Or link to interactive prototype</span>
+            </div>
+          </section>
+
+          <!-- 11 Reflection -->
+          <section id="reflection" class="cs-section reveal">
+            <span class="cs-section__overline">11 — Reflection</span>
+            <h2 class="cs-section__title">What I learned</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              LMCS was my most complex product design project — designing for three user roles with different mental models, building a dual-theme design system, and handling data-heavy enterprise interfaces.
+            </p>
+            <div class="cs-reflection">
+              <div class="cs-reflection__card">
+                <h4>Multi-role complexity</h4>
+                <p>Designing for three roles taught me to think in permission layers and information scoping — showing each user exactly what they need, nothing more.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Design system discipline</h4>
+                <p>Building a dual-theme system forced consistency. Every color, spacing, and component decision had to work in both light and dark contexts simultaneously.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Enterprise UX patterns</h4>
+                <p>Working with data tables, filters, role badges, and stat cards taught me how to make information-dense interfaces feel scannable and actionable.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="cs-next" aria-label="Next project">
+      <div class="container reveal">
+        <div class="cs-next__label">Next Project</div>
+        <a href="ecours.html" class="cs-next__title">eCours →</a>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Tarek Zerari</a>
+          <div class="footer__copyright">&copy; <span data-year></span> All rights reserved.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

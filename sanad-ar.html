@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanad — دراسة حالة | طارق زراري</title>
+  <meta name="description" content="سند: منصة عربية أولاً لمدارس القرآن مبنية بـVite وJavaScript وSupabase وNetlify Blobs. دراسة حالة من طارق زراري.">
+  <meta property="og:title" content="Sanad — دراسة حالة | طارق زراري">
+  <meta property="og:description" content="منصة عربية أولاً لمدارس القرآن: Supabase Postgres، Netlify Blobs للوسائط، مزامنة مؤجلة، وتطبيق SPA بتوجيه hash.">
+    <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/editorial-case.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index-ar.html" class="nav__logo">طارق زراري</a>
+        <div class="nav__links">
+          <a href="index-ar.html#work" class="nav__link">الأعمال</a>
+          <a href="index-ar.html#about" class="nav__link">نبذة عني</a>
+          <a href="index-ar.html#stack" class="nav__link">الحزمة</a>
+          <a href="index-ar.html#experience" class="nav__link">الخبرة</a>
+          <a href="index-ar.html#contact" class="nav__link">تواصل معي</a>
+        </div>
+        <div class="nav__lang">
+          <a href="sanad.html">EN</a>
+          <span class="nav__lang-sep">|</span>
+          <a href="sanad-ar.html" class="active">AR</a>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index-ar.html#work" class="mobile-menu__link">الأعمال</a>
+    <a href="index-ar.html#about" class="mobile-menu__link">نبذة عني</a>
+    <a href="index-ar.html#stack" class="mobile-menu__link">الحزمة</a>
+    <a href="index-ar.html#experience" class="mobile-menu__link">الخبرة</a>
+    <a href="index-ar.html#contact" class="mobile-menu__link">تواصل معي</a>
+    <div class="nav__lang" style="margin-top: 1rem; justify-content: center;">
+      <a href="sanad.html">English</a>
+      <span class="nav__lang-sep">|</span>
+      <a href="sanad-ar.html" class="active">العربية</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Case Study Hero -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__breadcrumb hero-enter hero-enter--delay-1">
+          <a href="index-ar.html">الرئيسية</a><span>/</span><a href="index-ar.html#work">الأعمال</a><span>/</span><span>Sanad</span>
+        </div>
+        <div class="cs-hero__tags hero-enter hero-enter--delay-2">
+          <span class="badge badge--accent">تكنولوجيا التعليم</span>
+          <span class="badge badge--accent">تعلم القرآن</span>
+          <span class="badge badge--accent">هندسة متكاملة</span>
+        </div>
+        
+        <h1 class="cs-hero__title hero-enter hero-enter--delay-2">Sanad</h1>
+        
+        <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
+          منصة تعليمية مخصصة لرقمنة ومراقبة تقدم حفظ القرآن الكريم، الحضور، والمسابقات، بهدف سد الفجوة بين المعلمين والطلاب والإدارة.
+        </p>
+
+        <div class="hero-enter hero-enter--delay-3" style="margin-top: var(--space-4); margin-bottom: var(--space-6);">
+          <a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+            زيارة الموقع <span aria-hidden="true" style="margin-right: 0.5rem; display: inline-block; transform: scaleX(-1);">↗</span>
+          </a>
+        </div>
+
+        <div class="cs-hero__image hero-enter hero-enter--delay-4">
+          <img src="assets/projects/sanad.jpg" alt="الصفحة الرئيسية لمنصة سند لمدرسة قرآنية" width="1280" height="688" loading="eager" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Info Bar -->
+    <section class="cs-info" aria-label="Project information">
+      <div class="container">
+        <div class="cs-info__grid reveal">
+          <div class="cs-info__item"><span class="cs-info__label">الدور</span><span class="cs-info__value">مطوّر متكامل</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الجدول الزمني</span><span class="cs-info__value">2024</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">المنصة</span><span class="cs-info__value">ويب وموبايل</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الأدوات</span><span class="cs-info__value">Vite, JavaScript, Supabase, Netlify</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">المجال</span><span class="cs-info__value">التعليم / الشؤون الدينية</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <div class="container">
+      <div class="cs-content">
+        <aside class="cs-sidebar" aria-label="Case study navigation">
+          <nav class="cs-sidebar__nav">
+            <a href="#problem" class="cs-sidebar__link active">المشكلة</a>
+            <a href="#users" class="cs-sidebar__link">المستخدمون</a>
+            <a href="#design-flow" class="cs-sidebar__link">مسار التصميم</a>
+            <a href="#visual-identity" class="cs-sidebar__link">الهوية البصرية</a>
+            <a href="#final-design" class="cs-sidebar__link">التصميم النهائي</a>
+            <a href="#engineering" class="cs-sidebar__link">الهندسة</a>
+          </nav>
+        </aside>
+
+        <div>
+          <!-- 01 Problem -->
+          <section id="problem" class="cs-section reveal">
+            <span class="cs-section__overline">01 — المشكلة</span>
+            <h2 class="cs-section__title">تحدي التصميم</h2>
+            <p class="cs-section__text">
+              تعتمد المدارس القرآنية تقليدياً على الدفاتر الورقية لتسجيل تقدم الطلاب في الحفظ، الحضور، والملاحظات السلوكية. هذه الطريقة اليدوية تصعب على أولياء الأمور البقاء على اطلاع مستمر، وعلى الإداريين تتبع الأداء العام للفصول. كان التحدي هو ابتكار منصة رقمية تحافظ على الجوهر الروحي والتربوي لتعلم القرآن مع توفير أدوات حديثة لتتبع البيانات، تحفيز الطلاب بالتنافسية، وخلق اتصال سلس.
+            </p>
+          </section>
+
+          <!-- 02 Users -->
+          <section id="users" class="cs-section reveal">
+            <span class="cs-section__overline">02 — المستخدمون</span>
+            <h2 class="cs-section__title">من يستخدم هذه المنصة؟</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              تخدم منصة Sanad ثلاث مجموعات رئيسية من المستخدمين لضمان اتصال متكامل بين التعلم والمراقبة والإدارة.
+            </p>
+            <div class="cs-users">
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                <div class="cs-user__name">معلمو القرآن</div>
+                <div class="cs-user__desc">يحتاجون إلى طريقة سريعة وفعالة لتسجيل التلاوة اليومية، المراجعة، والحضور دون تعطيل سير الحلقة.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
+                <div class="cs-user__name">الطلاب وأولياء الأمور</div>
+                <div class="cs-user__desc">يرغبون في رؤية تقدمهم، عرض إدخالات المفكرة اليومية، والتحقق من لوحة الصدارة للبقاء متحفزين.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="cs-user__name">إدارة المدرسة</div>
+                <div class="cs-user__desc">تتطلب نظرة عامة شاملة على جميع الحلقات، تسجيلات الطلاب، وأنشطة المعلمين لمتابعة جودة التعليم.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 03 Design Flow -->
+          <section id="design-flow" class="cs-section reveal">
+            <span class="cs-section__overline">03 — مسار التصميم</span>
+            <h2 class="cs-section__title">استراتيجية واجهة المستخدم والمميزات</h2>
+            <div class="cs-flow-list">
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">01</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">المفكرة الرقمية</h3>
+                  <p class="cs-flow-item__text">انعكاس رقمي حديث لدفتر متابعة القرآن التقليدي، يتيح للمعلمين تسجيل السور والآيات المحددة للحفظ والمراجعة.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">02</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">الترتيب والتنافسية</h3>
+                  <p class="cs-flow-item__text">تنفيذ نظام لوحة الصدارة وتوزيع النقاط بناءً على جودة التلاوة والمواظبة لتشجيع المنافسة الإيجابية بين الطلاب.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">03</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">إدخال بيانات محسن</h3>
+                  <p class="cs-flow-item__text">تبسيط واجهة المعلم لضمان أن تسجيل تقدم الطالب اليومي يستغرق بضع ثوانٍ فقط.</p>
+                </div>
+              </div>
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">04</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">تجربة عربية أصيلة</h3>
+                  <p class="cs-flow-item__text">تم تصميم الواجهة من البداية لتدعم القراءة من اليمين إلى اليسار (RTL)، مع استخدام أنماط تجربة مستخدم تناسب اللغة العربية.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 Visual Identity -->
+          <section id="visual-identity" class="cs-section reveal">
+            <span class="cs-section__overline">04 — الهوية البصرية</span>
+            <h2 class="cs-section__title">ربط التقاليد بواجهة مستخدم حديثة</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              تم اختيار التوجه البصري لإثارة الشعور بالنمو الروحي، الثقة، والوضوح مع الالتزام بمبادئ تصميم منصات الـ SaaS الحديثة.
+            </p>
+            <div class="cs-vi-grid">
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+                <h3 class="cs-vi-card__title">لوحة ألوان النمو</h3>
+                <p class="cs-vi-card__text">اللون الأساسي هو الأخضر الإسلامي (#2D8A4E)، الذي يرمز للنمو والتقاليد، ممزوجاً بالأبيض الصافي والرمادي الناعم للحفاظ على التركيز.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+                <h3 class="cs-vi-card__title">الطباعة العربية</h3>
+                <p class="cs-vi-card__text">استخدام خطوط Cairo و Noto Kufi Arabic لضمان مقروئية ممتازة لكل من مكونات واجهة المستخدم الحديثة والنصوص العربية التقليدية.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                <h3 class="cs-vi-card__title">تخطيطات نظيفة</h3>
+                <p class="cs-vi-card__text">واجهة تعتمد على البطاقات مع ظلال خفيفة تخلق عمقاً بصرياً وتفصل بشكل أنيق بين المعلومات مثل السجلات اليومية والترتيب.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                <h3 class="cs-vi-card__title">الأيقونات</h3>
+                <p class="cs-vi-card__text">استخدام أيقونات ناعمة، دائرية، وذات صلة ثقافية لجعل التصفح بديهياً وسلساً للمستخدمين من جميع الخلفيات التقنية.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 05 Final Design -->
+          <section id="final-design" class="cs-section reveal">
+            <span class="cs-section__overline">05 — التصميم النهائي</span>
+            <h2 class="cs-section__title">المنصة النهائية</h2>
+
+            <h3 class="cs-design-subtitle">الصفحة الرئيسية</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">مقدمة ترحيبية نظيفة لمنصة Sanad، تسلط الضوء على رسالتها وميزاتها الأساسية.</p>
+            <div class="cs-fullwidth">
+              <img src="sanad-asset/landing.png" alt="الصفحة الرئيسية لمنصة Sanad" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+            </div>
+
+            <h3 class="cs-design-subtitle">لوحة تحكم الإدارة</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">مركز التحكم لإدارة المدرسة، يقدم رؤى سريعة لأعداد الطلاب والحلقات والأداء العام.</p>
+            <div class="cs-fullwidth" style="margin-top: var(--space-4);">
+              <img src="sanad-asset/adminpannel.png" alt="لوحة تحكم إدارة Sanad" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">دليل الطلاب</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">سجل منظم بشكل جيد لعرض وإدارة الطلاب المسجلين، فصولهم، وحالتهم التعليمية.</p>
+            <div class="cs-fullwidth">
+              <img src="sanad-asset/students.png" alt="إدارة الطلاب" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">المفكرة اليومية ولوحة الصدارة</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">الأدوات التعليمية الأساسية: المفكرة الرقمية لتتبع الحفظ والمراجعة اليومية، ولوحة ترتيب الفصل لتعزيز التفاعل والتنافس.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="sanad-asset/diary.png" alt="تتبع المفكرة الرقمية" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="sanad-asset/classment.png" alt="لوحة صدارة الطلاب" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+
+          </section>
+          <!-- Engineering Deep Dive -->
+          <section id="engineering" class="cs-section reveal">
+            <span class="cs-section__overline">الهندسة</span>
+            <h2 class="cs-section__title">خفيف، يعمل بضعف الاتصال، وثنائي اللغة</h2>
+            <p class="cs-section__text">
+              سند تطبيق صفحة واحدة بتوجيه hash، مبني بـVite ووحدات JavaScript أصلية — دون إطار عمل ودون مكتبة واجهة ثقيلة. يبقى الحجم صغيراً على أجهزة المدارس، مع اكتمال تجربة الإدارة والواجهة العامة.
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>تخزين هجين</h4>
+                  <p>السجلات المنظمة في Supabase Postgres، والوسائط المرفوعة في Netlify Blobs، فتبقى قاعدة البيانات خفيفة والتخزين منخفض التكلفة.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>مزامنة مؤجلة</h4>
+                  <p>تُكتب البيانات في localStorage أولاً، ثم يدفعها Netlify Function إلى السحابة بعد تأخير قصير، فتبقى الواجهة فورية على الاتصال الضعيف.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>تطبيق واعٍ بالأدوار</h4>
+                  <p>موجّه hash واحد يخدم الصفحات العامة ولوحة الإدارة: الحضور، الحفظ، النقاط، المسابقات ولوحة الترتيب.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>عربي RTL من البداية</h4>
+                  <p>الاتجاه والمسافات وعكس الأيقونات والخطوط تُعالج على مستوى التخطيط، فتكون الواجهة العربية هي التجربة الأساسية.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cs-overview">
+              <div class="cs-overview__block"><span class="cs-overview__label">الحزمة</span><span class="cs-overview__value">Vite، JavaScript (ES modules)، موجّه hash، CSS</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">الخلفية</span><span class="cs-overview__value">Supabase PostgreSQL، Netlify Blobs، Netlify Functions</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">مباشر</span><span class="cs-overview__value"><a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">sanad-quran.netlify.app</a></span></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="cs-next" aria-label="Next project">
+      <div class="container reveal">
+        <div class="cs-next__label">المشروع القادم</div>
+        <a href="lmcs-ar.html" class="cs-next__title">LMCS ←</a>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index-ar.html" class="footer__logo">طارق زراري</a>
+          <div class="footer__copyright">&copy; <span data-year></span> جميع الحقوق محفوظة.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

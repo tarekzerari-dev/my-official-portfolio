@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarek Zerari — Designer UI/UX &amp; Concepteur Produit | Développeur Full-Stack</title>
+  <meta name="description" content="Portfolio de Tarek Zerari, Designer UI/UX, Concepteur Produit et élève-ingénieur en informatique à l'ESI Alger. Conception de produits numériques intuitifs dans le SaaS, l'éducation et la santé.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tarek Zerari — Designer UI/UX &amp; Concepteur Produit">
+  <meta property="og:description" content="Je ne conçois pas seulement des interfaces. J'ingénie des produits numériques complets simplifiant les flux de travail complexes.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index-fr.html" class="nav__logo-wrapper" aria-label="Accueil Tarek Zerari">
+            <span class="nav__logo">Tarek Zerari</span>
+          </a>
+
+          <div class="nav__links">
+            <a href="#work" class="nav__link">Projets</a>
+            <a href="#about" class="nav__link">À propos</a>
+            <a href="#process" class="nav__link">Méthode</a>
+            <a href="#stack" class="nav__link">Stack</a>
+            <a href="#experience" class="nav__link">Expérience</a>
+            <a href="#contact" class="nav__link">Contact</a>
+          </div>
+
+          <div class="nav__actions">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Basculer le thème">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <!-- Language Switcher: EN / FR -->
+            <div class="nav__lang" role="group" aria-label="Sélecteur de langue">
+              <a href="index.html" hreflang="en">EN</a>
+              <a href="index-fr.html" class="active" aria-current="page">FR</a>
+            </div>
+
+            <a href="#contact" class="nav__cta nav__cta-desktop">Discutons</a>
+
+            <!-- Mobile Hamburger -->
+            <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation mobile">
+    <a href="#work" class="mobile-menu__link">Projets</a>
+    <a href="#about" class="mobile-menu__link">À propos</a>
+    <a href="#process" class="mobile-menu__link">Méthode</a>
+    <a href="#stack" class="mobile-menu__link">Stack</a>
+    <a href="#experience" class="mobile-menu__link">Expérience</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__controls">
+      <div class="nav__lang">
+        <a href="index.html">EN</a>
+        <a href="index-fr.html" class="active">FR</a>
+      </div>
+      <button class="theme-toggle" aria-label="Basculer le thème">
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+      </button>
+    </div>
+    <a href="#contact" class="btn btn--primary btn--lg" style="margin-top: 1rem;">Discutons</a>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge hero-enter hero-enter--delay-1">
+            <span class="badge badge--accent">
+              <span class="status-dot" aria-hidden="true"></span>
+              Disponible pour projets &amp; stages
+            </span>
+          </div>
+
+          <h1 class="hero__title hero-enter hero-enter--delay-2">
+            Tarek Zerari<br>
+            <span class="accent">Designer UI/UX &amp; Concepteur Produit</span>
+          </h1>
+
+          <p class="hero__subtitle hero-enter hero-enter--delay-3">
+            Concevoir des produits numériques complexes qui rendent les flux de travail intuitifs.
+          </p>
+
+          <p class="hero__description hero-enter hero-enter--delay-4">
+            Élève-ingénieur en informatique à l'ESI Alger, combinant conception de produit, réflexion UX et développement full-stack moderne (TypeScript, React, Next.js, Node.js, Supabase) pour créer des expériences numériques complètes et robustes.
+          </p>
+
+          <div class="hero__actions hero-enter hero-enter--delay-5">
+            <a href="#work" class="btn btn--primary btn--lg">
+              Découvrir mes projets
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#contact" class="btn btn--secondary btn--lg">
+              Me contacter
+            </a>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="hero__metrics reveal">
+            <div class="hero__metric">
+              <div class="hero__metric-value">4<span>+</span></div>
+              <div class="hero__metric-label">Systèmes Déployés</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value">100<span>%</span></div>
+              <div class="hero__metric-label">Conception &amp; Code de A à Z</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value">ESI</div>
+              <div class="hero__metric-label">Élève-Ingénieur en Informatique</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value">RTL<span>+</span></div>
+              <div class="hero__metric-label">Spécialiste SaaS &amp; Arabe (RTL)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SELECTED WORK ==================== -->
+    <section id="work" class="section work" aria-label="Projets sélectionnés">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Projets à la une</span>
+          <h2 class="section-title">Travaux Sélectionnés</h2>
+          <p class="section-subtitle">Quatre systèmes menés de la modélisation des données et parcours utilisateurs jusqu'à des interfaces soignées et accessibles.</p>
+        </div>
+
+        <div class="work__projects">
+
+          <!-- Project 01: eCours -->
+          <article class="project-card reveal">
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge badge--accent">SaaS Multi-tenant</span>
+                <span class="badge">Éducation</span>
+              </div>
+              <h3 class="project-card__title">eCours — Gestion Intelligente de Cours &amp; Émargement QR</h3>
+              <p class="project-card__desc">
+                Un système SaaS complet pour centres de formation gérant l'émargement instantané par QR code, les plannings multi-groupes, les frais de scolarité et les rapports administratifs avec une sécurité PostgreSQL Row-Level Security stricte.
+              </p>
+              <div class="project-card__stack">
+                <span class="chip">Next.js 16</span>
+                <span class="chip">React 19</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">Supabase</span>
+                <span class="chip">Postgres RLS</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="ecours.html" class="btn btn--primary">
+                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://github.com/tarekzerari-dev/ecours" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Code Source ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <img src="assets/projects/ecours.jpg" alt="Tableau de bord eCours avec scanner QR" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Project 02: Sanad -->
+          <article class="project-card reveal">
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge badge--accent">Plateforme Arabe (RTL)</span>
+                <span class="badge">Communautaire</span>
+              </div>
+              <h3 class="project-card__title">Sanad (سند / خيركم) — Plateforme pour Écoles Coraniques</h3>
+              <p class="project-card__desc">
+                Une plateforme communautaire pensée pour l'arabe remplaçant les registres papier par un suivi des présences, de la mémorisation, un système de points motivant et des classements publics en direct.
+              </p>
+              <div class="project-card__stack">
+                <span class="chip">Vite</span>
+                <span class="chip">Vanilla JS</span>
+                <span class="chip">Supabase</span>
+                <span class="chip">Netlify Blobs</span>
+                <span class="chip">Design RTL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="sanad.html" class="btn btn--primary">
+                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Site en direct ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <img src="assets/projects/sanad.jpg" alt="Interface de la plateforme Sanad pour élèves" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Project 03: LMCS -->
+          <article class="project-card reveal">
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge badge--accent">Gestion de Laboratoire</span>
+                <span class="badge">Académique</span>
+              </div>
+              <h3 class="project-card__title">LMCS — Portail de Supervision de Recherche</h3>
+              <p class="project-card__desc">
+                Portail académique conçu sur mesure pour le laboratoire LMCS de l'ESI Alger, adapté aux besoins distincts de trois rôles clés : Directeurs, Encadrants et Chercheurs.
+              </p>
+              <div class="project-card__stack">
+                <span class="chip">Design Produit</span>
+                <span class="chip">Design System</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Supabase</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="lmcs.html" class="btn btn--primary">
+                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://lmcs-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Site en direct ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <img src="assets/projects/lmcs.jpg" alt="Interface du portail de recherche LMCS" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Project 04: HealthTrack -->
+          <article class="project-card reveal">
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge badge--accent">Concept Produit</span>
+                <span class="badge">Santé</span>
+              </div>
+              <h3 class="project-card__title">HealthTrack — Interface de Prise de RDV Médical</h3>
+              <p class="project-card__desc">
+                Un parcours fluide condensant la recherche de praticien et la sélection de créneau en 3 étapes claires, complété par le suivi des constantes du patient.
+              </p>
+              <div class="project-card__stack">
+                <span class="chip">React</span>
+                <span class="chip">UI/UX</span>
+                <span class="chip">Prototype Interactif</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="healthtrack.html" class="btn btn--primary">
+                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://health-track-front.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Démo en direct ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <img src="assets/projects/healthtrack.jpg" alt="Écran de réservation de consultation HealthTrack" loading="lazy">
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section about section--border-top" aria-label="À propos de moi">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Parcours</span>
+          <h2 class="section-title">À Propos</h2>
+          <p class="section-subtitle">Combiner la rigueur de l'ingénierie logicielle et le soin du design centré utilisateur.</p>
+        </div>
+
+        <div class="about__content">
+          <div class="about__text reveal">
+            <p>
+              Je m'appelle <strong>Tarek Zerari</strong>, étudiant en génie informatique à l'<strong>ESI Alger</strong> et concepteur indépendant de produits numériques. Je me passionne pour le point d'équilibre précis entre besoins utilisateurs et contraintes d'ingénierie logicielle.
+            </p>
+            <p>
+              Plutôt que de concevoir des maquettes isolées, je structure le produit dès son modèle de données relationnel et ses politiques d'accès jusqu'aux micro-interactions et à la fluidité typographique. Cette approche globale élimine les frictions de transmission et garantit un logiciel robuste et agréable.
+            </p>
+            <p>
+              En parallèle de mes études, je coordonne la communication externe et les partenariats en tant que <strong>Responsable des Relations Extérieures au Shellmates Club</strong>, le club de cybersécurité de l'ESI Alger.
+            </p>
+          </div>
+
+          <div class="about__details reveal">
+            <div>
+              <div class="about__group-title">Formation</div>
+              <div class="about__education">
+                <div class="about__school">ESI Alger (École Nationale Supérieure d'Informatique)</div>
+                <div class="about__degree">Diplôme d'Ingénieur d'État en Informatique</div>
+                <div class="about__year">2023 — Présent · Alger, Algérie</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="about__group-title">Leadership &amp; Vie Associative</div>
+              <div class="about__education">
+                <div class="about__school">Club Shellmates — ESI Alger</div>
+                <div class="about__degree">Responsable des Relations Extérieures</div>
+                <div class="about__year">Actuel</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="about__group-title">Spécialisations</div>
+              <div class="about__interests">
+                <span class="chip">Design Produit SaaS</span>
+                <span class="chip">Ingénierie Full-Stack</span>
+                <span class="chip">Design RTL &amp; Arabe</span>
+                <span class="chip">Systèmes de Design</span>
+                <span class="chip">Exploration Flutter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="section process section--border-top" aria-label="Méthodologie">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Méthodologie</span>
+          <h2 class="section-title">Comment Je Construis des Produits</h2>
+          <p class="section-subtitle">Un cadre réfléchi en 4 étapes pour transformer des problèmes complexes en logiciels fiables.</p>
+        </div>
+
+        <div class="process__grid">
+          <div class="process-step reveal">
+            <div class="process-step__number">01</div>
+            <h3 class="process-step__title">Découvrir &amp; Modéliser</h3>
+            <p class="process-step__desc">
+              Comprendre les enjeux métiers, cartographier les parcours utilisateurs et poser le schéma de base de données relationnelle avant de tracer le premier pixel.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__number">02</div>
+            <h3 class="process-step__title">Système &amp; Tokens</h3>
+            <p class="process-step__desc">
+              Définir les tokens de design réutilisables, les échelles typographiques, les grilles responsives et les règles de compatibilité RTL.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__number">03</div>
+            <h3 class="process-step__title">Prototyper &amp; Valider</h3>
+            <p class="process-step__desc">
+              Créer des prototypes interactifs haute-fidélité pour éprouver les flux réels, identifier les cas limites et supprimer les frictions avant le développement lourd.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__number">04</div>
+            <h3 class="process-step__title">Coder &amp; Déployer</h3>
+            <p class="process-step__desc">
+              Développer le frontend et le backend avec TypeScript, Next.js et Supabase, sécuriser l'accès aux données (RLS), optimiser les performances et déployer en production.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STACK ==================== -->
+    <section id="stack" class="section stack section--border-top" aria-label="Stack Technique">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Compétences &amp; Outils</span>
+          <h2 class="section-title">Stack Technique</h2>
+          <p class="section-subtitle">Les technologies que j'utilise au quotidien pour concevoir des produits web performants et maintenables.</p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-card reveal">
+            <h3 class="stack-card__title">Langages</h3>
+            <div class="stack-card__list">
+              <div class="stack-card__item">TypeScript</div>
+              <div class="stack-card__item">JavaScript (ES6+)</div>
+              <div class="stack-card__item">Python</div>
+              <div class="stack-card__item">SQL (PostgreSQL)</div>
+              <div class="stack-card__item">C / C++</div>
+              <div class="stack-card__item">HTML5 &amp; CSS Moderne</div>
+            </div>
+          </div>
+
+          <div class="stack-card reveal">
+            <h3 class="stack-card__title">Frontend</h3>
+            <div class="stack-card__list">
+              <div class="stack-card__item">React 19</div>
+              <div class="stack-card__item">Next.js 16 (App Router)</div>
+              <div class="stack-card__item">Tailwind CSS v4</div>
+              <div class="stack-card__item">TanStack Query</div>
+              <div class="stack-card__item">Framer Motion</div>
+              <div class="stack-card__item">Vite</div>
+            </div>
+          </div>
+
+          <div class="stack-card reveal">
+            <h3 class="stack-card__title">Backend &amp; Données</h3>
+            <div class="stack-card__list">
+              <div class="stack-card__item">Node.js</div>
+              <div class="stack-card__item">Next.js Server Actions</div>
+              <div class="stack-card__item">Supabase</div>
+              <div class="stack-card__item">PostgreSQL &amp; RLS</div>
+              <div class="stack-card__item">APIs REST</div>
+              <div class="stack-card__item">Netlify Blobs</div>
+            </div>
+          </div>
+
+          <div class="stack-card reveal">
+            <h3 class="stack-card__title">Design &amp; Outils</h3>
+            <div class="stack-card__list">
+              <div class="stack-card__item">Figma (UI/UX)</div>
+              <div class="stack-card__item">Git &amp; GitHub</div>
+              <div class="stack-card__item">Vercel &amp; Netlify</div>
+              <div class="stack-card__item">Flutter <small class="badge">en exploration</small></div>
+              <div class="stack-card__item">Design Systems</div>
+              <div class="stack-card__item">Responsive &amp; RTL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="section experience section--border-top" aria-label="Expérience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Parcours &amp; Responsabilités</span>
+          <h2 class="section-title">Expérience &amp; Leadership</h2>
+          <p class="section-subtitle">Des réalisations concrètes en gestion associative, projets personnels et études d'ingénieur.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="exp-row">
+            <div class="exp-row__period">Actuel</div>
+            <div>
+              <h3 class="exp-row__role">Responsable des Relations Extérieures</h3>
+              <div class="exp-row__org">Club Shellmates · ESI Alger</div>
+              <p class="exp-row__desc">
+                Représentation du club de cybersécurité auprès des partenaires industriels, sponsors et intervenants. Coordination de la communication externe lors des hackathons et conférences technologiques.
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-row__period">2024 — Présent</div>
+            <div>
+              <h3 class="exp-row__role">Concepteur Produit Indépendant &amp; Développeur Full-Stack</h3>
+              <div class="exp-row__org">eCours · Sanad · LMCS · HealthTrack</div>
+              <p class="exp-row__desc">
+                Pilotage de projets complets, des entretiens utilisateurs aux architectures de bases de données et interfaces de production. Réalisation de systèmes SaaS multi-tenants et d'interfaces bilingues RTL.
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-row__period">2023 — Présent</div>
+            <div>
+              <h3 class="exp-row__role">Élève-Ingénieur en Informatique</h3>
+              <div class="exp-row__org">ESI Alger (École Nationale Supérieure d'Informatique)</div>
+              <p class="exp-row__desc">
+                Cursus d'ingénieur de 5 ans couvrant les fondements de l'algorithmique, l'architecture logicielle, les systèmes d'exploitation, la modélisation de bases de données et le génie logiciel appliqué.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PERSONALITY / TRAITS ==================== -->
+    <section class="section personality section--border-top" aria-label="Valeurs">
+      <div class="container">
+        <h2 class="personality__headline reveal">
+          Concevoir des produits avec empathie, rigueur et <span class="accent">impact</span>.
+        </h2>
+        <p class="personality__subtext reveal">
+          Les principes directeurs derrière chaque ligne de code, relation de schéma et interaction.
+        </p>
+
+        <div class="personality__traits reveal">
+          <div class="personality__trait">
+            <div class="personality__trait-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+            </div>
+            <span class="personality__trait-label">Pensée Systémique</span>
+          </div>
+
+          <div class="personality__trait">
+            <div class="personality__trait-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h3l3-8 4 16 3-8h5"></path></svg>
+            </div>
+            <span class="personality__trait-label">Résolution de Problèmes</span>
+          </div>
+
+          <div class="personality__trait">
+            <div class="personality__trait-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span class="personality__trait-label">Apprentissage Continu</span>
+          </div>
+
+          <div class="personality__trait">
+            <div class="personality__trait-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <span class="personality__trait-label">Livraison de Produits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section contact section--border-top" aria-label="Contact">
+      <div class="container">
+        <div class="contact__inner reveal">
+          <span class="overline" style="margin-bottom: var(--space-4);">Me Contacter</span>
+          <h2 class="contact__headline">Vous avez un projet en tête ?</h2>
+          <p class="contact__desc">
+            Que vous recherchiez un stagiaire ingénieur, un concepteur produit ou un développeur full-stack capable de concrétiser une idée de la maquette à la production, contactez-moi avec plaisir.
+          </p>
+
+          <div class="contact__actions">
+            <a href="mailto:nt_zerari@esi.dz" class="btn btn--primary btn--lg">
+              M'envoyer un email
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <button type="button" class="btn btn--secondary btn--lg" data-copy-email="nt_zerari@esi.dz">
+              Copier l'email : nt_zerari@esi.dz
+            </button>
+          </div>
+
+          <div class="contact__links">
+            <a href="mailto:nt_zerari@esi.dz" class="contact__link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 7L2 7"></path></svg>
+              nt_zerari@esi.dz
+            </a>
+            <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="contact__link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="contact__link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index-fr.html" class="footer__logo">Tarek Zerari</a>
+          <div class="footer__copyright">&copy; <span data-year></span> Tarek Zerari. Conçu avec précision et standards web modernes.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

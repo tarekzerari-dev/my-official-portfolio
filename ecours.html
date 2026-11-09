@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCours — Case Study | Tarek Zerari</title>
+  <meta name="description" content="eCours: a full-stack multi-tenant SaaS for tutoring centers built with Next.js 16, TypeScript, Supabase and Postgres RLS. Case study by Tarek Zerari.">
+  <meta property="og:title" content="eCours — Case Study | Tarek Zerari">
+  <meta property="og:description" content="A multi-tenant SaaS for tutoring centers: Postgres schema, row-level security, QR attendance and Arabic-first UX.">
+    <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/editorial-case.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Tarek Zerari</a>
+        <div class="nav__links">
+          <a href="index.html#work" class="nav__link">Work</a>
+          <a href="index.html#about" class="nav__link">About</a>
+          <a href="index.html#stack" class="nav__link">Stack</a>
+          <a href="index.html#experience" class="nav__link">Experience</a>
+          <a href="index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <div class="nav__actions">
+          <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <div class="nav__lang" role="group" aria-label="Language selector">
+            <a href="ecours.html" class="active">EN</a>
+            <a href="index-fr.html#work">FR</a>
+          </div>
+          <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#work" class="mobile-menu__link">Work</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#stack" class="mobile-menu__link">Stack</a>
+    <a href="index.html#experience" class="mobile-menu__link">Experience</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__breadcrumb hero-enter hero-enter--delay-1">
+          <a href="index.html">Home</a><span>/</span><a href="index.html#work">Work</a><span>/</span><span>eCours</span>
+        </div>
+
+        <div class="cs-hero__tags hero-enter hero-enter--delay-2">
+          <span class="badge badge--accent">SaaS</span>
+          <span class="badge badge--accent">EdTech</span>
+          <span class="badge badge--accent">Full-Stack Engineering</span>
+          <span class="badge badge--accent">Next.js + Supabase</span>
+        </div>
+
+        <h1 class="cs-hero__title hero-enter hero-enter--delay-2">eCours</h1>
+
+        <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
+          Digitizing private tutoring center operations into a real-time management SaaS for independent educators, school directors, and super admins.
+        </p>
+
+        <div class="cs-hero__image hero-enter hero-enter--delay-4">
+          <img src="assets/projects/ecours.jpg" alt="eCours attendance dashboard with QR check-in and admin metrics" width="1280" height="632" loading="eager" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Info Bar -->
+    <section class="cs-info" aria-label="Project information">
+      <div class="container">
+        <div class="cs-info__grid reveal">
+          <div class="cs-info__item">
+            <span class="cs-info__label">Role</span>
+            <span class="cs-info__value">Full-Stack Developer</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Timeline</span>
+            <span class="cs-info__value">2024</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Platform</span>
+            <span class="cs-info__value">Web, Tablet, Mobile</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Tools</span>
+            <span class="cs-info__value">Next.js 16, TypeScript, Supabase, Tailwind CSS</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Industry</span>
+            <span class="cs-info__value">EdTech / SaaS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <div class="container">
+      <div class="cs-content">
+
+        <aside class="cs-sidebar" aria-label="Case study navigation">
+          <nav class="cs-sidebar__nav">
+            <a href="#overview" class="cs-sidebar__link active">Overview</a>
+            <a href="#problem" class="cs-sidebar__link">The Problem</a>
+            <a href="#users" class="cs-sidebar__link">Users &amp; Personas</a>
+            <a href="#assumptions" class="cs-sidebar__link">Design Assumptions</a>
+            <a href="#information-architecture" class="cs-sidebar__link">IA &amp; Speed Flow</a>
+            <a href="#design-system" class="cs-sidebar__link">Design System</a>
+            <a href="#final-design" class="cs-sidebar__link">Final Interface</a>
+            <a href="#rtl-design" class="cs-sidebar__link">Arabic-First UX</a>
+            <a href="#responsive" class="cs-sidebar__link">Responsive Strategy</a>
+            <a href="#engineering" class="cs-sidebar__link">Engineering</a>
+            <a href="#reflection" class="cs-sidebar__link">Reflection</a>
+          </nav>
+        </aside>
+
+        <div>
+
+          <!-- 01 Overview -->
+          <section id="overview" class="cs-section reveal">
+            <span class="cs-section__overline">01 — Overview</span>
+            <h2 class="cs-section__title">Simplifying tutoring center administration</h2>
+            <p class="cs-section__text">
+              eCours is an educational management SaaS engineered to streamline administrative workflows for private tutoring centers and independent teachers. The platform bridges attendance logging, tuition tracking, capacity planning, and multi-school telemetry into an intuitive, multi-device dashboard experience.
+            </p>
+            <div class="cs-overview">
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">Product Type</span>
+                <span class="cs-overview__value">Multi-tenant B2B SaaS platform for education management</span>
+              </div>
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">My Role</span>
+                <span class="cs-overview__value">Full-Stack Developer — data model, RLS policies, Server Actions, QR attendance flow, Arabic-first interface, and the React component system</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 02 Problem -->
+          <section id="problem" class="cs-section reveal">
+            <span class="cs-section__overline">02 — The Problem</span>
+            <h2 class="cs-section__title">Manual logs, financial leakage, &amp; delay</h2>
+            <p class="cs-section__text">
+              Private tutoring centers and independent academies traditionally operate using physical notebooks, scattered messaging channels, and manual cash tracking. This leads to operational friction:
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Slow attendance logging</h4>
+                  <p>Taking roll call manually eats up 10-15 minutes of limited class time.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Unclear payment status</h4>
+                  <p>Center managers struggle to track tuition dues, leading to uncollected fees.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 03 Users & Personas -->
+          <section id="users" class="cs-section reveal">
+            <span class="cs-section__overline">03 — Users &amp; Personas</span>
+            <h2 class="cs-section__title">Designed for three core roles</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              eCours is structured around distinct mental models across the educational hierarchy:
+            </p>
+            <div class="cs-users">
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="cs-user__name">Independent Educator</div>
+                <div class="cs-user__desc">Needs quick 1-click attendance tracking and instant debt visibility on mobile/tablet.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="cs-user__name">School Director</div>
+                <div class="cs-user__desc">Oversees multiple rooms, schedules, teacher payments, and central cash flow.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="cs-user__name">Super Administrator</div>
+                <div class="cs-user__desc">Monitors platform-wide SaaS health, school subscriptions, and global telemetry.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 Design Assumptions -->
+          <section id="assumptions" class="cs-section reveal">
+            <span class="cs-section__overline">04 — Design Assumptions</span>
+            <h2 class="cs-section__title">Foundational product assumptions</h2>
+            <p class="cs-section__text">
+              Rather than claiming formal user research, the product direction was established on these key operational assumptions:
+            </p>
+            <div class="cs-reflection" style="margin-top: var(--space-6);">
+              <div class="cs-reflection__card">
+                <h4>Speed over complexity</h4>
+                <p>Teachers will abandon a digital tool if logging attendance takes longer than 2 seconds per student.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>High Arabic-RTL prevalence</h4>
+                <p>Primary target users in the MENA region require an experience built natively for Arabic reading direction, not auto-translated text.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Varied device sizes</h4>
+                <p>Teachers use smartphones on the go, while school directors work at desktop workstations with high data density.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 05 Information Architecture & Speed Flow -->
+          <section id="information-architecture" class="cs-section reveal">
+            <span class="cs-section__overline">05 — IA &amp; Speed Flow</span>
+            <h2 class="cs-section__title">Frictionless architecture &amp; attendance flow</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The product architecture prioritizes "Cognitive Calm" — organizing dense administrative data into clear visual containers and high-priority quick actions.
+            </p>
+            
+            <!-- Placeholder: User Flow / IA -->
+            <div class="cs-placeholder cs-placeholder--flow">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4"/></svg>
+              <span class="cs-placeholder__label">Fast QR / 1-Click Attendance Flow</span>
+              <span class="cs-placeholder__sublabel">Optimized interaction path for teachers under 1.5 seconds</span>
+            </div>
+          </section>
+
+          <!-- 06 Design System -->
+          <section id="design-system" class="cs-section reveal">
+            <span class="cs-section__overline">06 — Design System</span>
+            <h2 class="cs-section__title">Emerald, Slate, &amp; Dual Typography</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The visual identity blends educational focus, trust, and modern fintech reliability.
+            </p>
+            <div class="cs-vi-grid">
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Bilingual Font Scale</h3>
+                <p class="cs-vi-card__text">"Cairo" for geometric clarity in Arabic text. "Inter" for high-legibility numbers, timestamps, and Latin codes.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Emerald &amp; Slate</h3>
+                <p class="cs-vi-card__text">Educational Emerald &amp; Sage primary accents paired with Neutral Slate for high readability and structured framing.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Glassmorphic Cards</h3>
+                <p class="cs-vi-card__text">Soft glass panels with backdrop blur and subtle border highlights to define content hierarchy without visual noise.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20V2z"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Dark Mode First</h3>
+                <p class="cs-vi-card__text">Deep slate tones (avoiding pure black) paired with emerald glows for reduced eye strain during extended work hours.</p>
+              </div>
+            </div>
+
+            <!-- Placeholder: Design Tokens -->
+            <div class="cs-placeholder cs-placeholder--system" style="margin-top: var(--space-8);">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              <span class="cs-placeholder__label">Design System Token Specification</span>
+              <span class="cs-placeholder__sublabel">Component library, Cairo/Inter typographic scale, color tokens</span>
+            </div>
+          </section>
+
+          <!-- 07 Final Interface -->
+          <section id="final-design" class="cs-section reveal">
+            <span class="cs-section__overline">07 — Final Interface</span>
+            <h2 class="cs-section__title">The finished platform</h2>
+
+            <h3 class="cs-design-subtitle">The Landing Page Experience</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A welcoming, highly-converting front door to the platform, highlighting core value propositions and platform benefits.</p>
+            <div class="cs-fullwidth">
+              <img src="ecours-asset/landing1.png" alt="eCours Landing Page Hero" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+            </div>
+
+            <h3 class="cs-design-subtitle">Core Features &amp; Value Proposition</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">Presenting complex SaaS benefits through scannable, beautifully illustrated sections.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/landing2.png" alt="eCours Platform Features" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/landing3.png" alt="eCours Benefits Grid" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+              </div>
+            </div>
+            
+            <div class="cs-fullwidth" style="margin-top: var(--space-4);">
+              <img src="ecours-asset/landing4.png" alt="eCours Personas Section" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+            </div>
+
+            <h3 class="cs-design-subtitle">Super Admin Telemetry Dashboard</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A bird's-eye view of platform health, featuring fluid KPI cards, semantic icons, and bold Arabic metric values.</p>
+            <div class="cs-fullwidth">
+              <img src="ecours-asset/admin1.png" alt="Super Admin Dashboard" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">School &amp; Teacher Management</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">High-contrast data tables with alternating hover-lift interactions, allowing for instant search and intuitive roster management.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/admin2.png" alt="School Management Table" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="ecours-asset/admin3.png" alt="Teacher Roster List" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+
+            <h3 class="cs-design-subtitle">Student Registry &amp; Quick Filters</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A unified master student registry showcasing visual hierarchy, localized initials, and quick filtering controls.</p>
+            <div class="cs-fullwidth">
+              <img src="ecours-asset/admin4.png" alt="Student Registry Table" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+          </section>
+
+          <!-- 08 Arabic-First UX -->
+          <section id="rtl-design" class="cs-section reveal">
+            <span class="cs-section__overline">08 — Arabic-First UX</span>
+            <h2 class="cs-section__title">Native RTL layout ergonomics</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              eCours was designed from the ground up for Right-to-Left (RTL) reading patterns rather than an English-first translation overlay. Navigation placement, card layout flows, and metric numbers follow native Arabic eye scanning habits.
+            </p>
+            <!-- Placeholder: RTL comparison -->
+            <div class="cs-placeholder cs-placeholder--desktop">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
+              <span class="cs-placeholder__label">RTL Layout &amp; Typographic Grid Placeholder</span>
+              <span class="cs-placeholder__sublabel">Arabic Cairo baseline alignment and mirroring rationale</span>
+            </div>
+          </section>
+
+          <!-- 09 Responsive Strategy -->
+          <section id="responsive" class="cs-section reveal">
+            <span class="cs-section__overline">09 — Responsive Strategy</span>
+            <h2 class="cs-section__title">Mobile-first for teachers, Desktop-first for admins</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              Different roles require different hardware environments. The UI adapts dynamically:
+            </p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-placeholder cs-placeholder--mobile">
+                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+                <span class="cs-placeholder__label">Mobile Teacher View</span>
+                <span class="cs-placeholder__sublabel">1-tap attendance screen</span>
+              </div>
+              <div class="cs-placeholder cs-placeholder--desktop">
+                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span class="cs-placeholder__label">Desktop Director Portal</span>
+                <span class="cs-placeholder__sublabel">Multi-column telemetry &amp; tables</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Engineering Deep Dive -->
+          <section id="engineering" class="cs-section reveal">
+            <span class="cs-section__overline">Engineering</span>
+            <h2 class="cs-section__title">The system behind the screens</h2>
+            <p class="cs-section__text">
+              eCours is not a mockup. It is a working Next.js 16 application with React 19, TypeScript and Supabase: Server Components render role-scoped dashboards, Server Actions own every write, and TanStack Query keeps client lists in sync after each mutation.
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Multi-tenant schema</h4>
+                  <p>Nine related tables — profiles, schools, teacher_profiles, groups, students, student_groups, sessions, attendance and payments — scoped by school and role.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Row-level security</h4>
+                  <p>Postgres RLS policies enforce superadmin, manager and teacher boundaries at the database layer, not just in the interface.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>QR attendance</h4>
+                  <p>Every session issues a QR code; the teacher scans it with the device camera and attendance is written to Postgres in real time.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Arabic-first i18n</h4>
+                  <p>Every screen ships in Arabic and English with RTL layout, mirrored icons and locale-aware formatting from the first component.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cs-overview">
+              <div class="cs-overview__block"><span class="cs-overview__label">Stack</span><span class="cs-overview__value">Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion, TanStack Query v5</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">Backend</span><span class="cs-overview__value">Supabase Auth, Postgres, RLS, Server Actions — deployed on Netlify</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">Source</span><span class="cs-overview__value"><a href="https://github.com/tarekzerari-dev/ecours" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">github.com/tarekzerari-dev/ecours</a></span></div>
+            </div>
+          </section>
+
+          <!-- 10 Reflection -->
+          <section id="reflection" class="cs-section reveal">
+            <span class="cs-section__overline">10 — Reflection</span>
+            <h2 class="cs-section__title">Key takeaways</h2>
+            <div class="cs-reflection">
+              <div class="cs-reflection__card">
+                <h4>Multi-tenant UX</h4>
+                <p>Designing interfaces that scale seamlessly across single independent tutors to multi-branch academy networks.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Arabic RTL precision</h4>
+                <p>Mastering typographic baselines, number alignment, and layout mirroring for Arabic-first SaaS products.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Financial legibility</h4>
+                <p>Structuring fee status, debt indicators, and revenue tables so key numbers can be scanned in seconds.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="cs-next" aria-label="Next project">
+      <div class="container reveal">
+        <div class="cs-next__label">Next Project</div>
+        <a href="healthtrack.html" class="cs-next__title">HealthTrack →</a>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Tarek Zerari</a>
+          <div class="footer__copyright">&copy; <span data-year></span> All rights reserved.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

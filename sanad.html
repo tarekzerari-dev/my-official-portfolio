@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanad — Case Study | Tarek Zerari</title>
+  <meta name="description" content="Sanad: an Arabic-first Quran school platform built with Vite, vanilla JavaScript, Supabase and Netlify Blobs. Case study by Tarek Zerari.">
+  <meta property="og:title" content="Sanad — Case Study | Tarek Zerari">
+  <meta property="og:description" content="An Arabic-first Quran school platform: Supabase Postgres, Netlify Blobs media, debounced sync and hash-routed SPA.">
+    <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:image" content="https://tarekzerari.vercel.app/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/editorial-case.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Tarek Zerari</a>
+        <div class="nav__links">
+          <a href="index.html#work" class="nav__link">Work</a>
+          <a href="index.html#about" class="nav__link">About</a>
+          <a href="index.html#stack" class="nav__link">Stack</a>
+          <a href="index.html#experience" class="nav__link">Experience</a>
+          <a href="index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <div class="nav__actions">
+          <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <div class="nav__lang" role="group" aria-label="Language selector">
+            <a href="sanad.html" class="active">EN</a>
+            <a href="index-fr.html#work">FR</a>
+          </div>
+          <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#work" class="mobile-menu__link">Work</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#stack" class="mobile-menu__link">Stack</a>
+    <a href="index.html#experience" class="mobile-menu__link">Experience</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__breadcrumb hero-enter hero-enter--delay-1">
+          <a href="index.html">Home</a><span>/</span><a href="index.html#work">Work</a><span>/</span><span>Sanad</span>
+        </div>
+
+        <div class="cs-hero__tags hero-enter hero-enter--delay-2">
+          <span class="badge badge--accent">EdTech</span>
+          <span class="badge badge--accent">Quran Learning</span>
+          <span class="badge badge--accent">Full-Stack Engineering</span>
+        </div>
+
+        <h1 class="cs-hero__title hero-enter hero-enter--delay-2">Sanad</h1>
+
+        <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
+          A dedicated learning platform to digitize and monitor Quranic memorization progress, attendance, and competitions, bridging teachers, students, and administration.
+        </p>
+
+        <div class="hero-enter hero-enter--delay-3" style="margin-top: var(--space-4); margin-bottom: var(--space-6);">
+          <a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+            Visit live site <span aria-hidden="true" style="margin-left: 0.5rem;">↗</span>
+          </a>
+        </div>
+
+        <div class="cs-hero__image hero-enter hero-enter--delay-4">
+          <img src="assets/projects/sanad.jpg" alt="Sanad Quran school platform homepage" width="1280" height="688" loading="eager" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Info Bar -->
+    <section class="cs-info" aria-label="Project information">
+      <div class="container">
+        <div class="cs-info__grid reveal">
+          <div class="cs-info__item">
+            <span class="cs-info__label">Role</span>
+            <span class="cs-info__value">Full-Stack Developer</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Timeline</span>
+            <span class="cs-info__value">2024</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Platform</span>
+            <span class="cs-info__value">Web &amp; Mobile Web</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Tools</span>
+            <span class="cs-info__value">Vite, JavaScript, Supabase, Netlify</span>
+          </div>
+          <div class="cs-info__item">
+            <span class="cs-info__label">Industry</span>
+            <span class="cs-info__value">Education / Religion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <div class="container">
+      <div class="cs-content">
+
+        <aside class="cs-sidebar" aria-label="Case study navigation">
+          <nav class="cs-sidebar__nav">
+            <a href="#overview" class="cs-sidebar__link active">Overview</a>
+            <a href="#problem" class="cs-sidebar__link">The Problem</a>
+            <a href="#users" class="cs-sidebar__link">Users</a>
+            <a href="#assumptions" class="cs-sidebar__link">Design Assumptions</a>
+            <a href="#rtl-ux" class="cs-sidebar__link">RTL &amp; Cultural UX</a>
+            <a href="#visual-identity" class="cs-sidebar__link">Visual Identity</a>
+            <a href="#final-design" class="cs-sidebar__link">Final Design</a>
+            <a href="#engineering" class="cs-sidebar__link">Engineering</a>
+            <a href="#reflection" class="cs-sidebar__link">Reflection</a>
+          </nav>
+        </aside>
+
+        <div>
+
+          <!-- 01 Overview -->
+          <section id="overview" class="cs-section reveal">
+            <span class="cs-section__overline">01 — Overview</span>
+            <h2 class="cs-section__title">Digitizing Quranic education management</h2>
+            <p class="cs-section__text">
+              Sanad is an educational tracking platform designed for Quranic schools and circles. It replaces paper diary logs with a modern digital system for tracking memorization progress (Hifz), daily revision, attendance, and student rankings.
+            </p>
+            <div class="cs-overview">
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">Product Focus</span>
+                <span class="cs-overview__value">Arabic-first educational management &amp; gamified progress tracking</span>
+              </div>
+              <div class="cs-overview__block">
+                <span class="cs-overview__label">My Role</span>
+                <span class="cs-overview__value">Full-Stack Developer — hybrid persistence, sync layer, hash-routed SPA, Arabic RTL interface, admin and public views</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 02 Problem -->
+          <section id="problem" class="cs-section reveal">
+            <span class="cs-section__overline">02 — The Problem</span>
+            <h2 class="cs-section__title">Manual paper logs &amp; disconnected parents</h2>
+            <p class="cs-section__text">
+              Quranic schools traditionally rely on paper notebooks to log students' daily recitation and attendance. This manual approach creates several pain points:
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Lost or damaged paper logs</h4>
+                  <p>Paper diaries get damaged or lost, losing months of progress history.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div class="cs-goals-grid__content">
+                  <h4>Lack of parent visibility</h4>
+                  <p>Parents rarely see daily progress or attendance notes until end of term.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 03 Users -->
+          <section id="users" class="cs-section reveal">
+            <span class="cs-section__overline">03 — Users</span>
+            <h2 class="cs-section__title">Connecting teachers, students, &amp; administration</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              Sanad serves three primary user groups:
+            </p>
+            <div class="cs-users">
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div class="cs-user__name">Quran Teachers</div>
+                <div class="cs-user__desc">Needs a fast way to log daily recitation, revision, and attendance in seconds.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                </div>
+                <div class="cs-user__name">Students &amp; Parents</div>
+                <div class="cs-user__desc">Monitors daily diary entries, memorization goals, and class leaderboards.</div>
+              </div>
+              <div class="cs-user">
+                <div class="cs-user__avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="cs-user__name">School Administration</div>
+                <div class="cs-user__desc">Requires a comprehensive overview of all classes, student rosters, and teacher activity.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 Design Assumptions -->
+          <section id="assumptions" class="cs-section reveal">
+            <span class="cs-section__overline">04 — Design Assumptions</span>
+            <h2 class="cs-section__title">Key UX assumptions</h2>
+            <div class="cs-reflection">
+              <div class="cs-reflection__card">
+                <h4>Digital reflection of physical diary</h4>
+                <p>Translating the familiar physical "المفكرة" format into UI reduces learning friction for traditional teachers.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Gamification boosts motivation</h4>
+                <p>Public class leaderboards and achievement points encourage healthy competition and consistent attendance.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 05 RTL & Cultural UX -->
+          <section id="rtl-ux" class="cs-section reveal">
+            <span class="cs-section__overline">05 — RTL &amp; Cultural UX</span>
+            <h2 class="cs-section__title">Arabic-first layout &amp; ergonomics</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              Sanad was crafted specifically for Right-to-Left (RTL) reading flow and Arabic typographic hierarchy. Surah names, verse range indicators, and grade badges follow natural Arabic reading patterns.
+            </p>
+            <!-- Placeholder: RTL UI Layout -->
+            <div class="cs-placeholder cs-placeholder--desktop">
+              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
+              <span class="cs-placeholder__label">RTL Digital Diary Layout Placeholder</span>
+              <span class="cs-placeholder__sublabel">Arabic typographic scale and verse selector ergonomics</span>
+            </div>
+          </section>
+
+          <!-- 06 Visual Identity -->
+          <section id="visual-identity" class="cs-section reveal">
+            <span class="cs-section__overline">06 — Visual Identity</span>
+            <h2 class="cs-section__title">Connecting tradition with modern UI</h2>
+            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
+              The visual identity balances spiritual warmth with clean digital utility.
+            </p>
+            <div class="cs-vi-grid">
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Growth Palette</h3>
+                <p class="cs-vi-card__text">Islamic Green (#2D8A4E) as the primary brand color, paired with soft grays and crisp whites to preserve visual clarity.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Arabic Typography</h3>
+                <p class="cs-vi-card__text">Cairo and Noto Kufi Arabic fonts optimized for legible reading of Quranic terms and UI elements.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Clean Layouts</h3>
+                <p class="cs-vi-card__text">Card-based structures with subtle borders separate daily logs, student details, and rankings.</p>
+              </div>
+              <div class="cs-vi-card">
+                <div class="cs-vi-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <h3 class="cs-vi-card__title">Iconography</h3>
+                <p class="cs-vi-card__text">Soft rounded icons to ensure intuitive navigation for users of all technical backgrounds.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 07 Final Design -->
+          <section id="final-design" class="cs-section reveal">
+            <span class="cs-section__overline">07 — Final Design</span>
+            <h2 class="cs-section__title">The finished platform</h2>
+
+            <h3 class="cs-design-subtitle">The Landing Page</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A clean, welcoming introduction to the Sanad school, highlighting its mission and features.</p>
+            <div class="cs-fullwidth">
+              <img src="sanad-asset/landing.png" alt="Sanad Landing Page" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+            </div>
+
+            <h3 class="cs-design-subtitle">Administration Dashboard</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The control center for school management, providing quick insights into student numbers and system health.</p>
+            <div class="cs-fullwidth" style="margin-top: var(--space-4);">
+              <img src="sanad-asset/adminpannel.png" alt="Sanad Admin Dashboard" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">Student Directory</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">A well-organized registry for viewing and managing enrolled students, their classes, and statuses.</p>
+            <div class="cs-fullwidth">
+              <img src="sanad-asset/students.png" alt="Students Management" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+            </div>
+
+            <h3 class="cs-design-subtitle">Daily Diary &amp; Leaderboards</h3>
+            <p class="cs-section__text" style="margin-bottom: var(--space-6);">The core educational tools: the digital diary (المفكرة) for tracking daily Hifz, and the class leaderboard (الترتيب) to foster engagement.</p>
+            <div class="cs-gallery cs-gallery--2">
+              <div class="cs-gallery__item">
+                <img src="sanad-asset/diary.png" alt="Digital Diary Tracking" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+              <div class="cs-gallery__item">
+                <img src="sanad-asset/classment.png" alt="Student Leaderboard" loading="lazy" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+              </div>
+            </div>
+          </section>
+
+          <!-- Engineering Deep Dive -->
+          <section id="engineering" class="cs-section reveal">
+            <span class="cs-section__overline">Engineering</span>
+            <h2 class="cs-section__title">Lightweight, offline-tolerant, bilingual</h2>
+            <p class="cs-section__text">
+              Sanad is a hash-routed single-page application built with Vite and vanilla JavaScript modules — no framework and no heavy UI dependency. That keeps the bundle small enough for school devices while still shipping the full admin and public experience.
+            </p>
+            <div class="cs-goals-grid">
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Hybrid persistence</h4>
+                  <p>Structured records live in Supabase Postgres; uploaded media is stored in Netlify Blobs, so the database stays lean and files stay cheap.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Debounced sync</h4>
+                  <p>Writes land in localStorage first, then a debounced Netlify Function pushes them to the cloud, keeping the interface instant on weak connections.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Role-aware SPA</h4>
+                  <p>One hash router serves public pages and the authenticated admin panel, with attendance, memorization, points, competitions and leaderboards.</p>
+                </div>
+              </div>
+              <div class="cs-goals-grid__item">
+                <div class="cs-goals-grid__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+                <div class="cs-goals-grid__content">
+                  <h4>Arabic RTL end to end</h4>
+                  <p>Direction, spacing, icon mirroring and typography are handled at the layout level, so the Arabic interface is the primary experience.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cs-overview">
+              <div class="cs-overview__block"><span class="cs-overview__label">Stack</span><span class="cs-overview__value">Vite, vanilla JavaScript (ES modules), hash router, CSS</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">Backend</span><span class="cs-overview__value">Supabase PostgreSQL, Netlify Blobs, Netlify Functions</span></div>
+              <div class="cs-overview__block"><span class="cs-overview__label">Live</span><span class="cs-overview__value"><a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">sanad-quran.netlify.app</a></span></div>
+            </div>
+          </section>
+
+          <!-- 08 Reflection -->
+          <section id="reflection" class="cs-section reveal">
+            <span class="cs-section__overline">08 — Reflection</span>
+            <h2 class="cs-section__title">Key learnings</h2>
+            <div class="cs-reflection">
+              <div class="cs-reflection__card">
+                <h4>Cultural Ergonomics</h4>
+                <p>Designing for traditional educational settings requires respecting established offline habits while removing manual friction.</p>
+              </div>
+              <div class="cs-reflection__card">
+                <h4>Arabic Type Hierarchy</h4>
+                <p>Mastering line height and font weights in Arabic UI to maintain high scannability across dense data lists.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="cs-next" aria-label="Next project">
+      <div class="container reveal">
+        <div class="cs-next__label">Next Project</div>
+        <a href="lmcs.html" class="cs-next__title">LMCS →</a>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Tarek Zerari</a>
+          <div class="footer__copyright">&copy; <span data-year></span> All rights reserved.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/tarek-zerari-197736331/" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/tarekzerari-dev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+          <a href="mailto:nt_zerari@esi.dz" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* ============================================
+   ANIMATIONS — Motion System
+   ============================================ */
+
+/* ---- Reveal Animations ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: 
+    opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 480ms; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 560ms; }
+.reveal-stagger > .reveal:nth-child(9) { transition-delay: 640ms; }
+
+/* ---- Variant: Fade only ---- */
+.reveal--fade {
+  transform: none;
+}
+
+/* ---- Variant: Slide from left ---- */
+.reveal--left {
+  transform: translateX(-24px);
+}
+
+.reveal--left.revealed {
+  transform: translateX(0);
+}
+
+/* ---- Variant: Slide from right ---- */
+.reveal--right {
+  transform: translateX(24px);
+}
+
+.reveal--right.revealed {
+  transform: translateX(0);
+}
+
+/* ---- Variant: Scale up ---- */
+.reveal--scale {
+  transform: scale(0.96);
+}
+
+.reveal--scale.revealed {
+  transform: scale(1);
+}
+
+/* ---- Hero Entrance ---- */
+.hero-enter {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroEnter 0.8s var(--ease-out) forwards;
+}
+
+.hero-enter--delay-1 { animation-delay: 0.1s; }
+.hero-enter--delay-2 { animation-delay: 0.2s; }
+.hero-enter--delay-3 { animation-delay: 0.35s; }
+.hero-enter--delay-4 { animation-delay: 0.5s; }
+.hero-enter--delay-5 { animation-delay: 0.65s; }
+
+@keyframes heroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Hover lift ---- */
+.hover-lift {
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* ---- Line draw ---- */
+.line-draw {
+  width: 0;
+  transition: width var(--duration-slower) var(--ease-out);
+}
+
+.line-draw.revealed {
+  width: 60px;
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .hero__float {
+    opacity: 1;
+    animation: none;
+  }
+}
