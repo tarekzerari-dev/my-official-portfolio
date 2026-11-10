@@ -260,14 +260,12 @@ body.ed {
   display: block;
   width: 100%;
   height: clamp(280px, 27vw, 362px);
-  object-fit: cover;
-  object-position: center top;
-  filter: grayscale(1) contrast(1.04);
-  mix-blend-mode: multiply;
-  transition: filter .6s var(--ease-out);
+  object-fit: contain;
+  object-position: bottom center;
+  background: radial-gradient(circle at 50% 42%, rgba(198, 242, 119, 0.14) 0%, #191D19 74%);
   border: 1px solid var(--border);
+  border-radius: var(--radius-md);
 }
-.ed-hero__portrait:hover img { filter: grayscale(0); }
 .ed-hero__portrait figcaption {
   display: flex;
   justify-content: space-between;

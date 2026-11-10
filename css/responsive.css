@@ -28,9 +28,51 @@
     display: flex;
   }
 
+  .hero {
+    min-height: auto;
+    padding-top: 110px;
+  }
+
+  .hero__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__portrait-col {
+    order: -1;
+  }
+
+  .hero__portrait-stage {
+    max-width: 280px;
+  }
+
+  .hero__portrait-img {
+    max-height: 290px;
+  }
+
+  .hero__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
   .hero__metrics {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
+    margin-top: var(--space-8);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project-card {
@@ -74,12 +116,21 @@
   }
 
   .hero {
-    padding-top: 105px;
+    padding-top: 96px;
+    padding-bottom: var(--space-12);
     min-height: auto;
   }
 
+  .hero__portrait-stage {
+    max-width: 220px;
+  }
+
+  .hero__portrait-img {
+    max-height: 230px;
+  }
+
   .hero__title {
-    font-size: clamp(2.2rem, 7vw, 3rem);
+    font-size: clamp(2rem, 7vw, 2.8rem);
   }
 
   .hero__metrics {
@@ -125,9 +176,53 @@
 
 /* ---- Mobile: ≤ 480px ---- */
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 84px;
+  }
+
+  .hero__portrait-stage {
+    max-width: 170px;
+  }
+
+  .hero__portrait-img {
+    max-height: 180px;
+  }
+
+  .hero__badge {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__status-pill {
+    padding: 5px 12px;
+    gap: 7px;
+    max-width: 100%;
+  }
+
+  .status-text {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+    line-height: 1.35;
+  }
+
+  .hero__title {
+    font-size: clamp(1.85rem, 8vw, 2.3rem);
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__subtitle {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero__description {
+    font-size: 0.92rem;
+    margin-bottom: var(--space-6);
+  }
+
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 
   .hero__actions .btn {
@@ -135,8 +230,8 @@
   }
 
   .hero__metrics {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
   }
 
   .personality__traits {

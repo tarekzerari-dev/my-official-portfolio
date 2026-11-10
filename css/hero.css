@@ -8,14 +8,68 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 130px;
+  padding-top: 120px;
   padding-bottom: var(--space-16);
+}
+
+.hero__layout {
+  position: relative;
+  z-index: var(--z-base);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.85fr);
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: center;
 }
 
 .hero__content {
   position: relative;
   z-index: var(--z-base);
-  max-width: 780px;
+  max-width: 700px;
+}
+
+.hero__portrait-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.hero__portrait-stage {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero__portrait-glow {
+  position: absolute;
+  inset: 8% 6% 12% 6%;
+  background: radial-gradient(circle at 50% 42%, rgba(198, 242, 119, 0.16) 0%, rgba(132, 151, 122, 0.06) 45%, transparent 72%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__portrait-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+  display: block;
+  mask-image:
+    linear-gradient(to bottom, #000 68%, transparent 98%),
+    linear-gradient(to right, transparent 0%, #000 10%, #000 95%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 68%, transparent 98%),
+    linear-gradient(to right, transparent 0%, #000 10%, #000 95%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  filter: contrast(1.03) brightness(0.98) drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
 }
 
 .hero__badge {
@@ -132,11 +186,13 @@
   align-items: center;
   gap: var(--space-4);
   flex-wrap: wrap;
-  margin-bottom: var(--space-12);
 }
 
 /* Key Metrics / Stats Bar */
 .hero__metrics {
+  position: relative;
+  z-index: var(--z-base);
+  margin-top: var(--space-10);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
@@ -145,7 +201,7 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   backdrop-filter: blur(12px);
-  max-width: 860px;
+  max-width: 100%;
 }
 
 .hero__metric {

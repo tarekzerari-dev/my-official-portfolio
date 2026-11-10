@@ -468,9 +468,14 @@
 .project-card__actions {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: 0.65rem;
   margin-top: var(--space-4);
   flex-wrap: wrap;
+}
+
+.project-card__actions .btn {
+  padding: 0.72rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .project-card__visual {

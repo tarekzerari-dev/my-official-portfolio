@@ -815,9 +815,17 @@
 }
 
 
-/* Dense blocks scroll inside their section instead of expanding the page */
-.cs-section {
-  overflow-x: auto;
+.cs-section code {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.cs-vi-card,
+.cs-overview__block,
+.cs-flow-item,
+.cs-goals-grid__item,
+.cs-reflection__card {
+  min-width: 0;
 }
 
 .cs-before-after {
@@ -834,8 +842,100 @@
   width: 100%;
 }
 
-@media (max-width: 700px) {
+/* ---- Responsive Case Study Breakpoints ---- */
+@media (max-width: 1024px) {
+  .cs-info__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .cs-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: var(--space-10) 0;
+  }
+
+  .cs-sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: var(--space-4);
+  }
+
+  .cs-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: var(--space-2);
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cs-sidebar__link {
+    white-space: nowrap;
+    border-inline-start: none;
+    border-bottom: 2px solid transparent;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .cs-sidebar__link.active {
+    border-inline-start-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-overview,
+  .cs-vi-grid,
+  .cs-gallery--2,
+  .cs-gallery--3,
+  .cs-goals,
+  .cs-goals-grid,
+  .cs-rationale,
+  .cs-rationale--reverse,
   .cs-before-after {
     grid-template-columns: 1fr;
+  }
+
+  .cs-before-after__arrow {
+    padding-top: 0;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-hero {
+    padding-top: 100px;
+    padding-bottom: var(--space-8);
+  }
+
+  .cs-info {
+    padding: var(--space-6) 0;
+  }
+
+  .cs-info__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .cs-flow-item {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+  }
+
+  .cs-vi-card,
+  .cs-overview__block,
+  .cs-goals-grid__item,
+  .cs-reflection__card {
+    padding: var(--space-5);
+  }
+
+  .cs-section {
+    padding-bottom: var(--space-10);
+    margin-bottom: var(--space-10);
   }
 }

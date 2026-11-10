@@ -100,62 +100,68 @@
       <div class="hero__glow" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="hero__content">
-          <div class="hero__status-wrapper hero-enter hero-enter--delay-1">
-            <div class="hero__status-pill">
-              <span class="status-beacon" aria-hidden="true">
-                <span class="status-beacon__ping"></span>
-                <span class="status-beacon__dot"></span>
-              </span>
-              <span class="status-text">Disponible pour rôles Full-Stack &amp; missions d'ingénierie</span>
+        <div class="hero__layout">
+          <div class="hero__content">
+            <div class="hero__badge hero-enter hero-enter--delay-1">
+              <div class="hero__status-pill">
+                <span class="status-beacon" aria-hidden="true">
+                  <span class="status-beacon__ping"></span>
+                  <span class="status-beacon__core"></span>
+                </span>
+                <span class="status-text">Disponible pour <span class="highlight">rôles Full-Stack</span> &amp; missions d'ingénierie</span>
+              </div>
+            </div>
+
+            <h1 class="hero__title hero-enter hero-enter--delay-2">
+              Tarek Zerari<br>
+              <span class="accent">Ingénieur Logiciel &amp; Architecte Full-Stack</span>
+            </h1>
+
+            <p class="hero__subtitle hero-enter hero-enter--delay-3">
+              Concevoir et développer des architectures SaaS complètes, des schémas de bases de données distribués et des interfaces utilisateur réactives ultra-performantes.
+            </p>
+
+            <p class="hero__description hero-enter hero-enter--delay-4">
+              Élève-ingénieur en informatique à l'ESI Alger. Spécialisé en ingénierie logicielle full-stack moderne (TypeScript, React 19, Next.js 16, Node.js, PostgreSQL, Supabase RLS). Je conçois des systèmes résilients, performants et sécurisés de bout en bout.
+            </p>
+
+            <div class="hero__actions hero-enter hero-enter--delay-5">
+              <a href="#work" class="btn btn--primary btn--lg">
+                Découvrir mes projets
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#contact" class="btn btn--secondary btn--lg">
+                Me contacter
+              </a>
             </div>
           </div>
 
-          <h1 class="hero__title hero-enter hero-enter--delay-2">
-            Tarek Zerari<br>
-            <span class="accent">Ingénieur Logiciel &amp; Architecte Full-Stack</span>
-          </h1>
-
-          <p class="hero__subtitle hero-enter hero-enter--delay-3">
-            Concevoir et développer des architectures SaaS complètes, des schémas de bases de données distribués et des interfaces utilisateur réactives ultra-performantes.
-          </p>
-
-          <p class="hero__description hero-enter hero-enter--delay-4">
-            Élève-ingénieur en informatique à l'ESI Alger. Spécialisé en ingénierie logicielle full-stack moderne (TypeScript, React 19, Next.js 16, Node.js, PostgreSQL, Supabase RLS). Je conçois des systèmes résilients, performants et sécurisés de bout en bout.
-          </p>
-
-          <div class="hero__actions hero-enter hero-enter--delay-5">
-            <a href="#work" class="btn btn--primary btn--lg">
-              Découvrir mes projets
-              <span class="btn-arrow" aria-hidden="true">→</span>
-            </a>
-            <a href="#contact" class="btn btn--secondary btn--lg">
-              Me contacter
-            </a>
-          </div>
-
-          <!-- Key Metrics -->
-          <div class="hero__metrics reveal">
-            <div class="hero__metric">
-              <div class="hero__metric-value">4<span>+</span></div>
-              <div class="hero__metric-label">Systèmes SaaS Déployés</div>
-            </div>
-            <div class="hero__metric">
-              <div class="hero__metric-value">100<span>%</span></div>
-              <div class="hero__metric-label">Full-Stack : DB → UI</div>
-            </div>
-            <div class="hero__metric">
-              <div class="hero__metric-value">ESI</div>
-              <div class="hero__metric-label">Ingénierie Logicielle</div>
-            </div>
-            <div class="hero__metric">
-              <div class="hero__metric-value">ACID</div>
-              <div class="hero__metric-label">Architecture PostgreSQL</div>
+          <div class="hero__portrait-col hero-enter hero-enter--delay-3">
+            <div class="hero__portrait-stage">
+              <div class="hero__portrait-glow" aria-hidden="true"></div>
+              <img src="assets/projects/tarek-hero.png" alt="Tarek Zerari — Ingénieur Logiciel Full-Stack" class="hero__portrait-img" width="900" height="900" loading="eager">
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <!-- Key Metrics -->
+        <div class="hero__metrics reveal">
+          <div class="hero__metric">
+            <div class="hero__metric-value">5<span>+</span></div>
+            <div class="hero__metric-label">Systèmes SaaS Déployés</div>
+          </div>
+          <div class="hero__metric">
+            <div class="hero__metric-value">100<span>%</span></div>
+            <div class="hero__metric-label">Full-Stack : DB → UI</div>
+          </div>
+          <div class="hero__metric">
+            <div class="hero__metric-value">ESI</div>
+            <div class="hero__metric-label">Ingénierie Logicielle</div>
+          </div>
+          <div class="hero__metric">
+            <div class="hero__metric-value">ACID</div>
+            <div class="hero__metric-label">Architecture PostgreSQL</div>
+          </div>
         </div>
       </div>
     </section>
@@ -166,7 +172,7 @@
         <div class="section-header reveal">
           <span class="overline">Projets à la une</span>
           <h2 class="section-title">Travaux Sélectionnés</h2>
-          <p class="section-subtitle">Quatre systèmes menés de la modélisation des données et parcours utilisateurs jusqu'à des interfaces soignées et accessibles.</p>
+          <p class="section-subtitle">Cinq systèmes menés de la modélisation des données et APIs jusqu'à des interfaces soignées et accessibles.</p>
         </div>
 
         <div class="work__projects">
@@ -191,7 +197,10 @@
               </div>
               <div class="project-card__actions">
                 <a href="ecours.html" class="btn btn--primary">
-                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                  Explorer <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://ecours.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Site en direct ↗
                 </a>
                 <a href="https://github.com/tarekzerari-dev/ecours" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                   Code Source ↗
@@ -223,7 +232,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="sanad.html" class="btn btn--primary">
-                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                  Explorer <span class="btn-arrow" aria-hidden="true">→</span>
                 </a>
                 <a href="https://sanad-quran.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                   Site en direct ↗
@@ -255,7 +264,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="lmcs.html" class="btn btn--primary">
-                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                  Explorer <span class="btn-arrow" aria-hidden="true">→</span>
                 </a>
                 <a href="https://lmcs-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                   Site en direct ↗
@@ -287,7 +296,7 @@
               </div>
               <div class="project-card__actions">
                 <a href="healthtrack.html" class="btn btn--primary">
-                  Étude de cas <span class="btn-arrow" aria-hidden="true">→</span>
+                  Explorer <span class="btn-arrow" aria-hidden="true">→</span>
                 </a>
                 <a href="https://health-track-front.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                   Démo en direct ↗
@@ -296,6 +305,41 @@
             </div>
             <div class="project-card__visual">
               <img src="assets/projects/healthtrack.jpg" alt="Écran de réservation de consultation HealthTrack" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Project 05: Le Gentleman -->
+          <article class="project-card reveal">
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge badge--accent">E-Commerce</span>
+                <span class="badge">Serverless &amp; RTL</span>
+              </div>
+              <h3 class="project-card__title">Le Gentleman — Boutique E-Commerce Bilingue</h3>
+              <p class="project-card__desc">
+                Vitrine e-commerce bilingue (FR / AR RTL) zéro-dépendance couvrant les 58 wilayas algériennes avec calcul dynamique des frais de livraison, pré-sélection intelligente au paiement et collecte serverless via Google Sheets.
+              </p>
+              <div class="project-card__stack">
+                <span class="chip">JavaScript ES6+</span>
+                <span class="chip">HTML5 &amp; CSS3</span>
+                <span class="chip">i18n FR / AR RTL</span>
+                <span class="chip">Google Apps Script</span>
+                <span class="chip">Netlify Edge</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="gentlemen.html" class="btn btn--primary">
+                  Explorer <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://legentlemen.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Site en direct ↗
+                </a>
+                <a href="https://github.com/tarekzerari-dev/Le-Gentleman" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                  Code Source ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <img src="assets/projects/gentlemen.jpg" alt="Interface de la boutique e-commerce Le Gentleman" loading="lazy">
             </div>
           </article>
 
