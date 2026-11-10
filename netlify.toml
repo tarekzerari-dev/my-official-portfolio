@@ -1,0 +1,5 @@
+# This portfolio is a static HTML/CSS/JS site served directly from the repo root.
+# These settings override the (incorrect) Remix defaults configured in the Netlify UI.
+[build]
+  command = "npm run build"
+  publish = "."
