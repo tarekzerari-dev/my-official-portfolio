@@ -39,13 +39,9 @@
           <a href="index.html#contact" class="nav__link">Contact</a>
         </div>
         <div class="nav__actions">
-          <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </button>
           <div class="nav__lang" role="group" aria-label="Language selector">
             <a href="ecours.html" class="active">EN</a>
-            <a href="index-fr.html#work">FR</a>
+            <a href="ecours-ar.html">AR</a>
           </div>
           <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -248,16 +244,9 @@
           <section id="information-architecture" class="cs-section reveal">
             <span class="cs-section__overline">05 — IA &amp; Speed Flow</span>
             <h2 class="cs-section__title">Frictionless architecture &amp; attendance flow</h2>
-            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              The product architecture prioritizes "Cognitive Calm" — organizing dense administrative data into clear visual containers and high-priority quick actions.
+            <p class="cs-section__text">
+              The product architecture prioritizes speed and reliability: organizing dense administrative data into clear visual containers and high-priority quick actions with optimistic client-side updates.
             </p>
-            
-            <!-- Placeholder: User Flow / IA -->
-            <div class="cs-placeholder cs-placeholder--flow">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4"/></svg>
-              <span class="cs-placeholder__label">Fast QR / 1-Click Attendance Flow</span>
-              <span class="cs-placeholder__sublabel">Optimized interaction path for teachers under 1.5 seconds</span>
-            </div>
           </section>
 
           <!-- 06 Design System -->
@@ -296,13 +285,6 @@
                 <h3 class="cs-vi-card__title">Dark Mode First</h3>
                 <p class="cs-vi-card__text">Deep slate tones (avoiding pure black) paired with emerald glows for reduced eye strain during extended work hours.</p>
               </div>
-            </div>
-
-            <!-- Placeholder: Design Tokens -->
-            <div class="cs-placeholder cs-placeholder--system" style="margin-top: var(--space-8);">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-              <span class="cs-placeholder__label">Design System Token Specification</span>
-              <span class="cs-placeholder__sublabel">Component library, Cairo/Inter typographic scale, color tokens</span>
             </div>
           </section>
 
@@ -356,40 +338,22 @@
             </div>
           </section>
 
-          <!-- 08 Arabic-First UX -->
+          <!-- 08 Arabic-First Architecture -->
           <section id="rtl-design" class="cs-section reveal">
-            <span class="cs-section__overline">08 — Arabic-First UX</span>
+            <span class="cs-section__overline">08 — Arabic-First Architecture</span>
             <h2 class="cs-section__title">Native RTL layout ergonomics</h2>
-            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              eCours was designed from the ground up for Right-to-Left (RTL) reading patterns rather than an English-first translation overlay. Navigation placement, card layout flows, and metric numbers follow native Arabic eye scanning habits.
+            <p class="cs-section__text">
+              eCours was engineered from the ground up for Right-to-Left (RTL) reading patterns rather than an English-first translation overlay. Navigation placement, card layout flows, and metric formatting follow native Arabic eye scanning habits with tailored Cairo typography.
             </p>
-            <!-- Placeholder: RTL comparison -->
-            <div class="cs-placeholder cs-placeholder--desktop">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
-              <span class="cs-placeholder__label">RTL Layout &amp; Typographic Grid Placeholder</span>
-              <span class="cs-placeholder__sublabel">Arabic Cairo baseline alignment and mirroring rationale</span>
-            </div>
           </section>
 
           <!-- 09 Responsive Strategy -->
           <section id="responsive" class="cs-section reveal">
             <span class="cs-section__overline">09 — Responsive Strategy</span>
             <h2 class="cs-section__title">Mobile-first for teachers, Desktop-first for admins</h2>
-            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              Different roles require different hardware environments. The UI adapts dynamically:
+            <p class="cs-section__text">
+              Different roles operate in distinct hardware environments. The responsive architecture serves a streamlined 1-tap mobile experience for teachers taking attendance on the move, while providing multi-column telemetry tables and filtering tools for desktop school administrators.
             </p>
-            <div class="cs-gallery cs-gallery--2">
-              <div class="cs-placeholder cs-placeholder--mobile">
-                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
-                <span class="cs-placeholder__label">Mobile Teacher View</span>
-                <span class="cs-placeholder__sublabel">1-tap attendance screen</span>
-              </div>
-              <div class="cs-placeholder cs-placeholder--desktop">
-                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                <span class="cs-placeholder__label">Desktop Director Portal</span>
-                <span class="cs-placeholder__sublabel">Multi-column telemetry &amp; tables</span>
-              </div>
-            </div>
           </section>
 
           <!-- Engineering Deep Dive -->

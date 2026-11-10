@@ -39,13 +39,9 @@
           <a href="index.html#contact" class="nav__link">Contact</a>
         </div>
         <div class="nav__actions">
-          <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </button>
           <div class="nav__lang" role="group" aria-label="Language selector">
             <a href="lmcs.html" class="active">EN</a>
-            <a href="index-fr.html#work">FR</a>
+            <a href="lmcs-ar.html">AR</a>
           </div>
           <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -73,16 +69,17 @@
         </div>
 
         <div class="cs-hero__tags hero-enter hero-enter--delay-2">
-          <span class="badge badge--accent">Enterprise</span>
-          <span class="badge badge--accent">SaaS</span>
-          <span class="badge badge--accent">Dashboard</span>
-          <span class="badge badge--accent">Product Design</span>
+          <span class="badge badge--accent">Enterprise SaaS</span>
+          <span class="badge badge--accent">Full-Stack</span>
+          <span class="badge badge--accent">Next.js 14</span>
+          <span class="badge badge--accent">Supabase RLS</span>
+          <span class="badge badge--accent">PostgreSQL</span>
         </div>
 
         <h1 class="cs-hero__title hero-enter hero-enter--delay-2">LMCS</h1>
 
         <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
-          Replacing fragmented spreadsheets and email chains with a unified supervision management platform for an academic research laboratory.
+          A full-stack supervision management portal for an academic research laboratory, replacing disconnected spreadsheets with role-based access control, real-time student monitoring, and automated report generation.
         </p>
 
         <div class="hero-enter hero-enter--delay-3" style="margin-top: var(--space-4); margin-bottom: var(--space-6);">
@@ -103,7 +100,7 @@
         <div class="cs-info__grid reveal">
           <div class="cs-info__item">
             <span class="cs-info__label">Role</span>
-            <span class="cs-info__value">Product Designer</span>
+            <span class="cs-info__value">Full-Stack Engineer &amp; Systems Architect</span>
           </div>
           <div class="cs-info__item">
             <span class="cs-info__label">Timeline</span>
@@ -111,15 +108,15 @@
           </div>
           <div class="cs-info__item">
             <span class="cs-info__label">Platform</span>
-            <span class="cs-info__value">Web</span>
+            <span class="cs-info__value">Web (Next.js App Router)</span>
           </div>
           <div class="cs-info__item">
             <span class="cs-info__label">Tools</span>
-            <span class="cs-info__value">Figma, Next.js, Supabase</span>
+            <span class="cs-info__value">Next.js 14, Supabase, PostgreSQL, TypeScript</span>
           </div>
           <div class="cs-info__item">
-            <span class="cs-info__label">Industry</span>
-            <span class="cs-info__value">Academic / Enterprise</span>
+            <span class="cs-info__label">Security &amp; Auth</span>
+            <span class="cs-info__value">Postgres RLS / Multi-Role RBAC</span>
           </div>
         </div>
       </div>
@@ -132,15 +129,13 @@
         <aside class="cs-sidebar" aria-label="Case study navigation">
           <nav class="cs-sidebar__nav">
             <a href="#overview" class="cs-sidebar__link active">Overview</a>
-            <a href="#problem" class="cs-sidebar__link">Problem</a>
-            <a href="#users" class="cs-sidebar__link">Users & Roles</a>
-            <a href="#goals" class="cs-sidebar__link">Goals</a>
-            <a href="#information-architecture" class="cs-sidebar__link">IA & Flows</a>
-            <a href="#wireframes" class="cs-sidebar__link">Wireframes</a>
-            <a href="#design-system" class="cs-sidebar__link">Design System</a>
-            <a href="#final-design" class="cs-sidebar__link">Final Interface</a>
-            <a href="#before-after" class="cs-sidebar__link">Before → After</a>
-            <a href="#prototype" class="cs-sidebar__link">Prototype</a>
+            <a href="#problem" class="cs-sidebar__link">The Problem</a>
+            <a href="#users" class="cs-sidebar__link">Roles &amp; Access</a>
+            <a href="#goals" class="cs-sidebar__link">System Architecture</a>
+            <a href="#information-architecture" class="cs-sidebar__link">RBAC Architecture</a>
+            <a href="#design-system" class="cs-sidebar__link">Design Tokens</a>
+            <a href="#final-design" class="cs-sidebar__link">Production Dashboards</a>
+            <a href="#before-after" class="cs-sidebar__link">Workflow Transformation</a>
             <a href="#reflection" class="cs-sidebar__link">Reflection</a>
           </nav>
         </aside>
@@ -254,44 +249,49 @@
             </div>
           </section>
 
-          <!-- 05 Information Architecture -->
+          <!-- 05 Information Architecture & Navigation -->
           <section id="information-architecture" class="cs-section reveal">
-            <span class="cs-section__overline">05 — Information Architecture</span>
-            <h2 class="cs-section__title">Structuring three different experiences</h2>
+            <span class="cs-section__overline">05 — Multi-Role Architecture</span>
+            <h2 class="cs-section__title">Role-based layout &amp; navigation routing</h2>
             <p class="cs-section__text" style="margin-bottom: var(--space-4);">
-              The biggest IA challenge was designing a navigation system that adapts to three user roles while maintaining a consistent structural pattern. Each role gets a sidebar with different menu items, but the overall layout, interaction patterns, and visual language remain identical — reducing cognitive load for users who might switch between contexts.
+              The core architectural challenge was designing an application routing and layout system that adapts to three distinct roles (Supervisors, Directors, Administrators) while maintaining a unified component hierarchy. Each role accesses a scoped sidebar navigation menu with server-validated route guards, preventing privilege escalation.
             </p>
             <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              The sidebar-first layout was chosen specifically for this project because supervisors and directors spend extended time working with data tables and dashboards. A persistent sidebar keeps navigation accessible without competing with the main content area.
+              The persistent sidebar structure was engineered specifically for heavy tabular workloads — supervisors and directors can pivot between student cohorts, defense schedules, and analytics without losing scroll state or data table filters.
             </p>
-
-            <!-- Placeholder: IA Diagram -->
-            <div class="cs-placeholder cs-placeholder--flow">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4"/></svg>
-              <span class="cs-placeholder__label">Information Architecture Diagram</span>
-              <span class="cs-placeholder__sublabel">Role-based navigation structure for Supervisor, Director, and Admin</span>
-            </div>
           </section>
 
-          <!-- 06 Wireframes -->
+          <!-- 06 Relational Schema & State Design -->
           <section id="wireframes" class="cs-section reveal">
-            <span class="cs-section__overline">06 — Wireframes</span>
-            <h2 class="cs-section__title">Exploring layout and hierarchy</h2>
+            <span class="cs-section__overline">06 — Relational Schema &amp; State</span>
+            <h2 class="cs-section__title">PostgreSQL schema &amp; Row Level Security</h2>
             <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              Low-fidelity wireframes were created for key screens — admin dashboard, supervisor panel, director statistics, and the landing/sign-in experience. The focus was on establishing information hierarchy, data table patterns, and stat card placements before committing to visual design.
+              Data integrity is strictly governed by PostgreSQL schemas in Supabase. Row Level Security (RLS) policies enforce data isolation at the database layer rather than relying on application code:
             </p>
 
-            <!-- Placeholder: Wireframes -->
-            <div class="cs-gallery cs-gallery--2">
-              <div class="cs-placeholder cs-placeholder--wireframe">
-                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                <span class="cs-placeholder__label">Dashboard Wireframe</span>
-                <span class="cs-placeholder__sublabel">Low-fidelity layout exploration</span>
+            <div class="cs-flow-list">
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">01</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">Supervisor isolation</h3>
+                  <p class="cs-flow-item__text">Supervisors have read/write access strictly bound to their assigned student research cohorts and personal thesis defense evaluations.</p>
+                </div>
               </div>
-              <div class="cs-placeholder cs-placeholder--wireframe">
-                <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                <span class="cs-placeholder__label">Data Table Wireframe</span>
-                <span class="cs-placeholder__sublabel">User management layout iteration</span>
+
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">02</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">Laboratory director aggregate view</h3>
+                  <p class="cs-flow-item__text">Directors query laboratory-wide analytics via optimized SQL views calculating active supervisions, defense success rates, and supervisor quota capacities.</p>
+                </div>
+              </div>
+
+              <div class="cs-flow-item">
+                <div class="cs-flow-item__number">03</div>
+                <div class="cs-flow-item__content">
+                  <h3 class="cs-flow-item__title">Admin role provisioning</h3>
+                  <p class="cs-flow-item__text">System administrators manage credential provisioning, department assignment, and batch academic year archiving with audit logs.</p>
+                </div>
               </div>
             </div>
           </section>
@@ -331,15 +331,8 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
                 </div>
                 <h3 class="cs-vi-card__title">Component Library</h3>
-                <p class="cs-vi-card__text">Stat cards, data tables, sidebar navigation, form inputs, role badges, status indicators, and chart components — all built as reusable Figma components with consistent spacing and border-radius tokens.</p>
+                <p class="cs-vi-card__text">Stat cards, data tables, sidebar navigation, form inputs, role badges, status indicators, and chart components — all built as reusable components with consistent spacing and border-radius tokens.</p>
               </div>
-            </div>
-
-            <!-- Placeholder: Design System -->
-            <div class="cs-placeholder cs-placeholder--system" style="margin-top: var(--space-8);">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-              <span class="cs-placeholder__label">Design System Overview</span>
-              <span class="cs-placeholder__sublabel">Color tokens, typography scale, component samples, spacing grid</span>
             </div>
           </section>
 
@@ -431,59 +424,35 @@
             <div class="cs-before-after">
               <div class="cs-before-after__panel">
                 <span class="cs-before-after__label cs-before-after__label--before">Before</span>
-                <p class="cs-before-after__text">Supervision data scattered across personal spreadsheets. Directors requesting reports via email. No centralized student tracking. Manual role-based access through shared folders.</p>
-                <!-- Placeholder -->
-                <div class="cs-placeholder cs-placeholder--flow" style="margin-top: var(--space-4);">
-                  <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                  <span class="cs-placeholder__label">Old Workflow Illustration</span>
-                </div>
+                <p class="cs-before-after__text">Supervision records were fragmented across personal spreadsheets and manual emails. Department directors lacked live completion tracking, and student submissions frequently suffered from lost version history and uncoordinated review threads.</p>
               </div>
               <div class="cs-before-after__arrow" aria-hidden="true">→</div>
               <div class="cs-before-after__panel">
                 <span class="cs-before-after__label cs-before-after__label--after">After</span>
-                <p class="cs-before-after__text">One platform, three dashboards. Supervisors track progress in real-time. Directors generate reports with one click. Administrators manage roles and permissions from a central panel.</p>
-                <!-- Placeholder -->
-                <div class="cs-placeholder cs-placeholder--flow" style="margin-top: var(--space-4);">
-                  <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                  <span class="cs-placeholder__label">New Platform Overview</span>
-                </div>
+                <p class="cs-before-after__text">A centralized full-stack portal with three synchronized role views. Supervisors evaluate milestone progress in real-time, directors export certified reports instantly, and administrators manage laboratory accounts and roles with full audit logs.</p>
               </div>
             </div>
           </section>
 
-          <!-- 10 Prototype -->
-          <section id="prototype" class="cs-section reveal">
-            <span class="cs-section__overline">10 — Prototype</span>
-            <h2 class="cs-section__title">Interactive prototype</h2>
-            <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              A clickable Figma prototype was created covering the core user journeys — supervisor login, student progress review, and director report generation.
-            </p>
-            <div class="cs-placeholder cs-placeholder--prototype">
-              <svg class="cs-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span class="cs-placeholder__label">Figma Prototype Embed</span>
-              <span class="cs-placeholder__sublabel">Or link to interactive prototype</span>
-            </div>
-          </section>
-
-          <!-- 11 Reflection -->
+          <!-- 09 Reflection -->
           <section id="reflection" class="cs-section reveal">
-            <span class="cs-section__overline">11 — Reflection</span>
-            <h2 class="cs-section__title">What I learned</h2>
+            <span class="cs-section__overline">09 — Reflection</span>
+            <h2 class="cs-section__title">Key engineering takeaways</h2>
             <p class="cs-section__text" style="margin-bottom: var(--space-8);">
-              LMCS was my most complex product design project — designing for three user roles with different mental models, building a dual-theme design system, and handling data-heavy enterprise interfaces.
+              Engineering LMCS demonstrated the value of robust relational schemas and fine-grained access control when building mission-critical enterprise software.
             </p>
             <div class="cs-reflection">
               <div class="cs-reflection__card">
-                <h4>Multi-role complexity</h4>
-                <p>Designing for three roles taught me to think in permission layers and information scoping — showing each user exactly what they need, nothing more.</p>
+                <h4>Database-enforced security</h4>
+                <p>Relying on PostgreSQL Row Level Security (RLS) ensured data boundary enforcement at the persistence tier, mitigating any risk of authorization leakage across API routes.</p>
               </div>
               <div class="cs-reflection__card">
-                <h4>Design system discipline</h4>
-                <p>Building a dual-theme system forced consistency. Every color, spacing, and component decision had to work in both light and dark contexts simultaneously.</p>
+                <h4>Component modularity</h4>
+                <p>Architecting reusable data tables, faceted search bars, and stat counters allowed consistent UI assembly across all three distinct user dashboards.</p>
               </div>
               <div class="cs-reflection__card">
-                <h4>Enterprise UX patterns</h4>
-                <p>Working with data tables, filters, role badges, and stat cards taught me how to make information-dense interfaces feel scannable and actionable.</p>
+                <h4>State synchronization</h4>
+                <p>Optimizing server-side data fetching with Next.js App Router reduced initial page payload while keeping client interactive filters lightning fast.</p>
               </div>
             </div>
           </section>

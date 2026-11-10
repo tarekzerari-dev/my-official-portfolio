@@ -74,13 +74,15 @@
           <a href="index-ar.html">الرئيسية</a><span>/</span><a href="index-ar.html#work">الأعمال</a><span>/</span><span>LMCS</span>
         </div>
         <div class="cs-hero__tags hero-enter hero-enter--delay-2">
-          <span class="badge badge--accent">إدارة المؤسسات</span>
-          <span class="badge badge--accent">أكاديمي</span>
-          <span class="badge badge--accent">UI/UX</span>
+          <span class="badge badge--accent">إدارة المؤسسات SaaS</span>
+          <span class="badge badge--accent">تطوير متكامل</span>
+          <span class="badge badge--accent">Next.js 14</span>
+          <span class="badge badge--accent">Supabase RLS</span>
+          <span class="badge badge--accent">PostgreSQL</span>
         </div>
         <h1 class="cs-hero__title hero-enter hero-enter--delay-2">LMCS</h1>
         <p class="cs-hero__subtitle hero-enter hero-enter--delay-3">
-          منصة حديثة لإدارة الإشراف الأكاديمي في مختبر أنظمة الكمبيوتر (LMCS) بالمدرسة العليا للإعلام الآلي (ESI Algiers).
+          منصة سحابية متكاملة لإدارة الإشراف الأكاديمي وتتبع الأبحاث في مختبر LMCS، مع نظام صلاحيات متعدد الأدوار (RBAC) وقاعدة بيانات PostgreSQL آمنة وحماية RLS.
         </p>
 
         <div class="hero-enter hero-enter--delay-3" style="margin-top: var(--space-4); margin-bottom: var(--space-6);">
@@ -99,11 +101,11 @@
     <section class="cs-info" aria-label="Project information">
       <div class="container">
         <div class="cs-info__grid reveal">
-          <div class="cs-info__item"><span class="cs-info__label">الدور</span><span class="cs-info__value">مصمم واجهات وتجربة المستخدم</span></div>
-          <div class="cs-info__item"><span class="cs-info__label">الجدول الزمني</span><span class="cs-info__value">2023 - 2024</span></div>
-          <div class="cs-info__item"><span class="cs-info__label">المنصة</span><span class="cs-info__value">ويب</span></div>
-          <div class="cs-info__item"><span class="cs-info__label">الأدوات</span><span class="cs-info__value">Figma, Miro</span></div>
-          <div class="cs-info__item"><span class="cs-info__label">المجال</span><span class="cs-info__value">الأوساط الأكاديمية / إدارة المؤسسات</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الدور</span><span class="cs-info__value">مهندس برمجيات ومطوّر متكامل</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الجدول الزمني</span><span class="cs-info__value">2024</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">المنصة</span><span class="cs-info__value">ويب (Next.js App Router)</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الحزمة التقنية</span><span class="cs-info__value">Next.js 14, Supabase, PostgreSQL, TypeScript</span></div>
+          <div class="cs-info__item"><span class="cs-info__label">الأمان والصلاحيات</span><span class="cs-info__value">Supabase RLS / Multi-Role RBAC</span></div>
         </div>
       </div>
     </section>
@@ -113,11 +115,11 @@
       <div class="cs-content">
         <aside class="cs-sidebar" aria-label="Case study navigation">
           <nav class="cs-sidebar__nav">
-            <a href="#problem" class="cs-sidebar__link active">المشكلة</a>
-            <a href="#users" class="cs-sidebar__link">المستخدمون</a>
-            <a href="#design-flow" class="cs-sidebar__link">مسار التصميم</a>
-            <a href="#visual-identity" class="cs-sidebar__link">الهوية البصرية</a>
-            <a href="#final-design" class="cs-sidebar__link">التصميم النهائي</a>
+            <a href="#problem" class="cs-sidebar__link active">المشكلة والهدف</a>
+            <a href="#users" class="cs-sidebar__link">المستخدمون والأدوار</a>
+            <a href="#design-flow" class="cs-sidebar__link">هندسة النظام والبيانات</a>
+            <a href="#visual-identity" class="cs-sidebar__link">الهوية والتصميم</a>
+            <a href="#final-design" class="cs-sidebar__link">اللوحات والواجهات</a>
           </nav>
         </aside>
 
@@ -156,28 +158,28 @@
 
           <!-- 03 Design Flow -->
           <section id="design-flow" class="cs-section reveal">
-            <span class="cs-section__overline">03 — مسار التصميم</span>
-            <h2 class="cs-section__title">هندسة المعلومات وسير العمل</h2>
+            <span class="cs-section__overline">03 — هندسة النظام والبيانات</span>
+            <h2 class="cs-section__title">المعمارية البرمجية وقواعد البيانات</h2>
             <div class="cs-flow-list" style="margin-top: var(--space-8);">
               <div class="cs-flow-item">
                 <div class="cs-flow-item__number">01</div>
                 <div class="cs-flow-item__content">
-                  <h3 class="cs-flow-item__title">هيكلة المعلومات (Information Architecture)</h3>
-                  <p class="cs-flow-item__text">قبل البدء في تصميم الواجهات، تم بناء خريطة شاملة لهندسة المعلومات لضمان سهولة الوصول للبيانات الأكاديمية.</p>
+                  <h3 class="cs-flow-item__title">مخطط قاعدة بيانات PostgreSQL علائقي</h3>
+                  <p class="cs-flow-item__text">بناء جداول محكمة تربط الطلاب بملفات الإشراف، مراحل التقدم الأكاديمي، وجداول تقييم اللجان مع قيود تكامل قوية تمنع تكرار أو فقدان البيانات.</p>
                 </div>
               </div>
               <div class="cs-flow-item">
                 <div class="cs-flow-item__number">02</div>
                 <div class="cs-flow-item__content">
-                  <h3 class="cs-flow-item__title">خرائط مسار المستخدم (User Flows)</h3>
-                  <p class="cs-flow-item__text">تم توثيق كل سيناريو - من تقديم طلب الإشراف وحتى التقييم النهائي - في خرائط مفصلة لتجنب أي تعقيد للمستخدم.</p>
+                  <h3 class="cs-flow-item__title">سياسات حماية على مستوى الصفوف (Postgres RLS)</h3>
+                  <p class="cs-flow-item__text">عزل البيانات الصارم على مستوى قاعدة البيانات بحيث لا يستطيع أي مشرف الوصول إلا إلى بيانات طلابه، بينما يتمتع المدير بصلاحية قراءة التحليلات الكلية.</p>
                 </div>
               </div>
               <div class="cs-flow-item">
                 <div class="cs-flow-item__number">03</div>
                 <div class="cs-flow-item__content">
-                  <h3 class="cs-flow-item__title">النماذج المبدئية (Wireframing)</h3>
-                  <p class="cs-flow-item__text">تم تحويل المتطلبات الوظيفية إلى نماذج تخطيطية منخفضة الدقة (Low-fi) للتحقق من توزيع المكونات المنطقي.</p>
+                  <h3 class="cs-flow-item__title">معمارية Next.js App Router والعرض الخادمي</h3>
+                  <p class="cs-flow-item__text">استرجاع سريع ومحسن للبيانات من جهة الخادم، مع واجهات تفاعلية تدعم التصفية السريعة والتصدير الفوري لتقارير CSV/PDF.</p>
                 </div>
               </div>
             </div>
