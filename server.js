@@ -1,10 +1,10 @@
-﻿import http from 'http';
+import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PORT = process.env.PORT || 3000;
+let port = parseInt(process.env.PORT || '3000', 10);
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -22,8 +22,9 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let cleanUrl = req.url.split('?')[0];
-  let safePath = path.normalize(cleanUrl).replace(/^(\.\.[\/\\])+/, '');
-  let filePath = path.join(__dirname, safePath === '/' ? 'index.html' : safePath);
+  let subPath = cleanUrl === '/' || cleanUrl === '' ? 'index.html' : cleanUrl.replace(/^\/+/, '');
+  let safePath = path.normalize(subPath).replace(/^(\.\.[\/\\])+/, '');
+  let filePath = path.join(__dirname, safePath);
 
   if (!filePath.startsWith(__dirname)) {
     res.writeHead(403);
@@ -43,6 +44,19 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(Server running on port );
+function startServer(p) {
+  server.listen(p, '0.0.0.0', () => {
+    console.log(`Server running at http://localhost:${p}`);
+  });
+}
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    port++;
+    startServer(port);
+  } else {
+    console.error('Server error:', err);
+  }
 });
+
+startServer(port);
