@@ -12,12 +12,6 @@ body {
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--card-border);
   background: var(--card-bg);
-  transition: border-color var(--duration-normal) var(--ease-out);
-}
-
-.cs-hero__image:hover,
-.cs-gallery__item:hover {
-  border-color: var(--card-hover-border);
 }
 
 .cs-ds-block,

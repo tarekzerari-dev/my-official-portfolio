@@ -5,10 +5,10 @@
 /* ---- Reveal Animations ---- */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(14px);
   transition: 
-    opacity var(--duration-slower) var(--ease-out),
-    transform var(--duration-slower) var(--ease-out);
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
 }
 
 .reveal.revealed {
@@ -18,14 +18,14 @@
 
 /* Stagger delays for children */
 .reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
-.reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
-.reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
-.reveal-stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
-.reveal-stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
-.reveal-stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
-.reveal-stagger > .reveal:nth-child(7) { transition-delay: 480ms; }
-.reveal-stagger > .reveal:nth-child(8) { transition-delay: 560ms; }
-.reveal-stagger > .reveal:nth-child(9) { transition-delay: 640ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 60ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 120ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 180ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 240ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 300ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 360ms; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 420ms; }
+.reveal-stagger > .reveal:nth-child(9) { transition-delay: 480ms; }
 
 /* ---- Variant: Fade only ---- */
 .reveal--fade {
@@ -34,7 +34,7 @@
 
 /* ---- Variant: Slide from left ---- */
 .reveal--left {
-  transform: translateX(-24px);
+  transform: translateX(-16px);
 }
 
 .reveal--left.revealed {
@@ -43,7 +43,7 @@
 
 /* ---- Variant: Slide from right ---- */
 .reveal--right {
-  transform: translateX(24px);
+  transform: translateX(16px);
 }
 
 .reveal--right.revealed {
@@ -52,7 +52,7 @@
 
 /* ---- Variant: Scale up ---- */
 .reveal--scale {
-  transform: scale(0.96);
+  transform: scale(0.98);
 }
 
 .reveal--scale.revealed {
@@ -62,15 +62,15 @@
 /* ---- Hero Entrance ---- */
 .hero-enter {
   opacity: 0;
-  transform: translateY(16px);
-  animation: heroEnter 0.8s var(--ease-out) forwards;
+  transform: translateY(12px);
+  animation: heroEnter 0.7s var(--ease-out) forwards;
 }
 
-.hero-enter--delay-1 { animation-delay: 0.1s; }
-.hero-enter--delay-2 { animation-delay: 0.2s; }
-.hero-enter--delay-3 { animation-delay: 0.35s; }
-.hero-enter--delay-4 { animation-delay: 0.5s; }
-.hero-enter--delay-5 { animation-delay: 0.65s; }
+.hero-enter--delay-1 { animation-delay: 0.08s; }
+.hero-enter--delay-2 { animation-delay: 0.16s; }
+.hero-enter--delay-3 { animation-delay: 0.28s; }
+.hero-enter--delay-4 { animation-delay: 0.4s; }
+.hero-enter--delay-5 { animation-delay: 0.52s; }
 
 @keyframes heroEnter {
   to {
@@ -81,11 +81,11 @@
 
 /* ---- Hover lift ---- */
 .hover-lift {
-  transition: transform var(--duration-normal) var(--ease-out);
+  transition: transform 0.25s var(--ease-out);
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 /* ---- Line draw ---- */

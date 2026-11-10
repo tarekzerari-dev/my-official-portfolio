@@ -445,7 +445,7 @@ body.ed {
   transition: transform 1s var(--ease-out), filter .6s;
   filter: saturate(.92);
 }
-.ed-project__media:hover img { transform: scale(1.035); filter: saturate(1); }
+.ed-project__media:hover img { transform: scale(1.02); filter: saturate(1); }
 
 .ed-project__foot {
   grid-column: 9 / -1;
