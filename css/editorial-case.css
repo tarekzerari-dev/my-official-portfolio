@@ -1,4 +1,6 @@
-/* Case study harmonious styling for modern tech aesthetic */
+/* ============================================================
+   CASE STUDY — Obsidian × Acid Lime Tech Studio Aesthetic
+   ============================================================ */
 body {
   background: var(--bg-primary);
   color: var(--text-secondary);
@@ -7,8 +9,15 @@ body {
 .cs-hero__image,
 .cs-gallery__item,
 .cs-fullwidth {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--card-border);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  transition: border-color var(--duration-normal) var(--ease-out);
+}
+
+.cs-hero__image:hover,
+.cs-gallery__item:hover {
+  border-color: var(--card-hover-border);
 }
 
 .cs-ds-block,
@@ -16,6 +25,16 @@ body {
 .cs-rationale,
 .cs-reflection__card {
   background: var(--card-bg);
-  border-color: var(--card-border);
+  border: 1px solid var(--card-border);
   backdrop-filter: blur(12px);
+}
+
+.cs-stat__number {
+  color: var(--accent);
+}
+
+.cs-badge--accent {
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
 }

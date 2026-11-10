@@ -23,7 +23,8 @@
 
 .btn--primary {
   background: var(--accent);
-  color: var(--white);
+  color: var(--color-background);
+  font-weight: var(--fw-semibold);
   border-color: var(--accent);
   box-shadow: 0 4px 14px var(--accent-glow);
 }
@@ -32,7 +33,7 @@
   background: var(--accent-hover);
   border-color: var(--accent-hover);
   box-shadow: var(--shadow-accent);
-  color: var(--white);
+  color: var(--color-background);
   transform: translateY(-2px);
 }
 
@@ -45,8 +46,8 @@
 
 .btn--secondary:hover {
   border-color: var(--border-hover);
-  background: var(--bg-surface);
-  color: var(--text-primary);
+  background: var(--bg-elevated);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
@@ -189,7 +190,7 @@
 .nav__link {
   font-size: 0.9rem;
   font-weight: var(--fw-medium);
-  color: var(--text-tertiary);
+  color: var(--text-primary);
   text-decoration: none;
   position: relative;
   transition: color var(--duration-fast) var(--ease-out);
@@ -209,7 +210,7 @@
 
 .nav__link:hover,
 .nav__link.active {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .nav__link:hover::after,
@@ -237,7 +238,7 @@
 
 .nav__cta:hover {
   background: var(--accent);
-  color: var(--white);
+  color: var(--color-background);
   box-shadow: 0 4px 16px var(--accent-glow);
   transform: translateY(-1px);
 }
